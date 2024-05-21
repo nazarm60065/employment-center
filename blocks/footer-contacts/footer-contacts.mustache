@@ -1,0 +1,38 @@
+{{#items.isNotEmpty}}
+    <div class="footer-contacts">
+        {{#items}}
+            <div class="footer-contact">
+                <div class="footer-contact-title-container">
+                    {{#title}}
+                        <div class="footer-contact__title">
+                            {{{.}}}
+                        </div>
+                    {{/title}}
+                    <div class="footer-contact-title-filler"></div>
+                </div>
+                <div class="footer-contact__value">
+                    {{#socials.isNotEmpty}}
+                        <div class="footer-contacts-socials">
+                            {{#socials}}
+                                <div class="footer-contacts-social">
+                                    <!--noindex-->
+                                    <a href="{{href}}" class="footer-contacts-social__link" rel="nofollow"
+                                       target="_blank">{{{text}}}</a>
+                                    <!--/noindex-->
+                                </div>
+                            {{/socials}}
+                        </div>
+                    {{/socials.isNotEmpty}}
+                    {{#link}}
+                        <!--noindex-->
+                        <a href="{{href}}" class="footer-contact__link" rel="nofollow">{{{text}}}</a>
+                        <!--/noindex-->
+                    {{/link}}
+                    {{^link}}
+                        {{{text}}}
+                    {{/link}}
+                </div>
+            </div>
+        {{/items}}
+    </div>
+{{/items.isNotEmpty}}

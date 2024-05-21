@@ -1,0 +1,31 @@
+.header-menu
+  font-size: 18px
+  font-weight: 500
+  line-height: 1
+  letter-spacing: -0.04em
+  color: $darkest-grey-color80
+
+.header-menu-list
+  display: flex
+  align-items: center
+  gap: 40px
+
+.header_homepage .header-menu
+  color: transparentize(#fff, 0.36)
+
++mq(desktop, max)
+  .header-menu
+    display: none
+
++mq(desktop)
+  .header-menu-item__link
+    transition: $default-transition
+    &:hover
+      color: $primary
+      
+  .header_homepage .header-menu-item__link:hover
+    color: #fff
+
+@media screen and (min-width: 1600px)
+  .header-menu-list
+    gap: 72px

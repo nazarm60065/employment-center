@@ -1,327 +1,139 @@
+@import "../footer-logo/footer-logo"
+@import "../footer-contacts/footer-contacts"
+
 .footer
-  background-color: #F8F8F8
-  padding: 24px 0
+  position: relative
+  margin-top: auto
+  padding-top: 20px
+  color: #fff
+  overflow: hidden
+
+.footer:before
+  content: ''
+  +absoluteFluid
+  background-color: $primary
+  border-radius: 32px 32px 0 0
+  z-index: -2
 
 .footer-inner
   position: relative
 
-.footer-logo
-  position: relative
-  display: flex
-  gap: 8px
-  font-size: 28px
-  font-weight: 500
-  margin-bottom: 32px
+.footer-bg
+  position: absolute
+  top: 0
+  left: 20px
+  width: 372px
+  height: 229px
+  z-index: -1
 
-.footer-logo__img
-  width: 27px
-  height: 33px
-  flex-shrink: 0
-  line-height: 0
+.footer-bg__map
+  width: 100%
+  height: 100%
+  +svg
 
-.footer-menu
-  font-size: 16px
-  font-weight: 500
-  margin-bottom: 32px
+.footer-bg__heart
+  position: absolute
+  bottom: 20px
+  right: 90px
+  width: 23px
+  height: 21px
+  +svg
 
-.footer-menu-list-item
-  margin-bottom: 16px
-  &:last-child
-    margin-bottom: 0
+.footer__title
+  font-size: 30px
+  font-weight: 600
+  line-height: 1
+  letter-spacing: -0.04em
+  em
+    font-family: $playfair-font
+    font-size: 31px
+    font-style: italic
+    font-weight: 500
+    letter-spacing: -0.02em
+
 
 .footer-button-container
-  margin-bottom: 16px
-  max-width: 380px
+  margin-top: 24px
 
 .footer__button
-  display: block
-  width: 100%
-  font-size: 16px
-  line-height: 1.25
-  font-weight: 500
-  padding: 17px
-
-.footer-tel
   display: flex
   align-items: center
-  gap: 8px
-  font-size: 20px
-  font-weight: 500
+  color: $primary
+  font-size: 18px
+  font-weight: 600
+  line-height: 1
+  letter-spacing: -0.04em
+  border-radius: 56px
+  border: 4px solid #fff
+  padding: 2px
 
-.footer-tel__icon
-  width: 16px
-  height: 16px
-  flex-shrink: 0
-  +svg
-
-.footer-mode
-  margin-top: 4px
-  font-size: 12px
-  font-weight: 400
-  color: $main-color90
-  b
-    font-size: 10px
-    font-weight: 500
-    color: $main-color
-
-.footer-mode__text
-  border-bottom: 1px dashed $main-color50
-
-.footer-tel-mode
-  margin-bottom: 25px
-
-.footer-contacts
-  margin-bottom: 32px
-
-.footer-contacts-item
+.footer__button-inner
   display: flex
   align-items: center
-  gap: 8px
-  font-size: 16px
-  font-weight: 400
-  margin-bottom: 8px
-
-.footer-contacts-item__icon
-  width: 32px
-  height: 32px
-  flex-shrink: 0
   background-color: #fff
-  border-radius: 6px
-  padding: 8px
+  padding: 6px 6px 6px 48px
+  border-radius: 56px
+  gap: 16px
+
+.footer__button-icon
+  width: 40px
+  height: 40px
+  background-color: $primary
+  padding: 10px
+  border-radius: 50%
   +svg
 
-.footer-socials
-  display: flex
-  justify-content: space-between
-  align-items: center
-  margin: 0
-
-.footer-socials__title
-  font-size: 14px
-  font-weight: 300
-
-.footer-socials-list
-  display: flex
-  align-items: center
-  gap: 8px
-
-.footer-socials-item__link
-  width: 32px
-  height: 32px
-  display: block
-  background-color: #fff
-  flex-shrink: 0
-  border-radius: 6px
-  padding: 8px
-  +svg
-
-.footer-link-list
-  font-size: 14px
-  font-weight: 500
-  color: $blue-color
-  margin-bottom: 32px
-
-.footer-link-list-item
-  margin-bottom: 8px
-  &:last-child
-    margin-bottom: 0
-
-.footer__link
-  border-bottom: 1px solid
-
-.footer-copyright
-  font-size: 10px
-  font-weight: 400
-  color: $main-color50
-
-.footer-copyright-inner
-  display: flex
-  align-items: center
-  gap: 2px
-
-.footer-copyright__icon
-  width: 8px
-  height: 8px
-  flex-shrink: 0
-  +svg
-
-.footer-copyright__note
-  font-size: 8px
-  font-weight: 400
-  color: $main-color30
-
+.footer-bottom
+  margin-top: 44px
+  padding-bottom: 16px
 
 .footer-dev
-  margin-top: 24px
-  font-size: 14px
-  font-weight: 400
-  padding-right: 30px
+  font-size: 16px
+  line-height: 1
+  letter-spacing: -0.04em
+  display: flex
+  gap: 4px
 
-.footer-dev__link
-  font-weight: bold
+.footer-dev a
+  font-family: $playfair-font
+  font-style: italic
+  font-weight: 600
+
+.footer-copyright
+  margin-top: 12px
+  border-top: 1px solid transparentize(#fff, 0.76)
+  padding-top: 12px
+  color: transparentize(#fff, 0.36)
+  font-size: 12px
+  line-height: 1
+  letter-spacing: -0.04em
 
 
-.footer-up
-  position: absolute
-  bottom: 0
-  right: 0
-
-.footer-up__button
-  display: block
-  width: 32px
-  height: 32px
-  border-radius: 6px
-  background-color: $light-violet-color
-  padding: 7px
-  +svg
-
-+mq(desktop)
++mq(tablet)
   .footer
-    padding: 48px 0
-
-  .footer-inner
-    display: grid
-    grid-template-columns: repeat(4, auto)
-    grid-template-rows: repeat(3, auto)
-    grid-template-areas: 'logo menu contacts button' 'logo menu contacts links' 'bottom bottom socials up'
-    justify-content: space-between
-
-  .footer-logo
-    grid-area: logo
-    font-size: 44px
-    font-weight: 500
-    gap: 14px
-    margin: 0
-
-  .footer-logo__img
-    width: 42px
-    height: 51px
-
-  .footer-menu
-    grid-area: menu
-    font-size: 18px
-    margin: 0
-
-  .footer-menu-list-item
-    margin-bottom: 8px
-
-  .footer-menu-list-item__link
-    transition: color $default-transition
-    &:hover
-      color: $light-violet-color
-
-  .footer-contacts
-    grid-area: contacts
-    margin: 0 0 40px
-    width: 295px
-
-  .footer-contacts-item
-    font-size: 18px
-    gap: 8px
-    align-items: flex-start
-    margin-bottom: 16px
-
-  .footer-contacts-item__icon
-    margin-top: 2px
-    background-color: transparent
-    border-radius: 0
-    padding: 0
-    width: 20px
-    height: 20px
+    padding-top: 64px
+    border-radius: 48px 48px 0 0
 
 
-  .footer-contacts-item__link
-    transition: color $default-transition
-    &:hover
-      color: $violet-color
+  .footer-bg
+    top: 64px
+    left: auto
+    right: 16px
+    width: 529px
+    height: 327px
 
-  .footer-tel-mode
-    margin: 0 0 40px
+  .footer-bg__heart
+    width: 38px
+    height: 38px
+    right: 140px
+    bottom: 25px
 
-  .footer-tel
-    font-size: 20px
-    font-weight: 500
-
-  .footer-tel__link
-    transition: color $default-transition
-    &:hover
-      color: $violet-color
-
-  .footer-button-container
-    grid-area: button
-    width: 310px
-    margin-left: auto
-    margin-bottom: 40px
-
-  .footer-link-list
-    grid-area: links
-    margin-left: auto
-    text-align: right
-    font-size: 16px
-
-  .footer__link
-    transition: $default-transition
-    &:hover
-      border-bottom-color: transparent
-
-  .footer-socials
-    grid-area: socials
-    width: 295px
-
-  .footer-socials-item__link
-    width: 42px
-    height: 42px
-    border-radius: 8px
-    padding: 10px
-    transition: background-color $default-transition
-    &:hover
-      background-color: $light-violet-color
-
-  .footer-socials-item__link path
-    transition: fill $default-transition
-
-  .footer-socials-item__link:hover path
-    fill: #fff
-
-  .footer-bottom
-    grid-area: bottom
+  .footer-top
     display: flex
-    align-items: center
     justify-content: space-between
+    gap: 70px
 
-  .footer-copyright
-    font-size: 16px
-
-  .footer-copyright-inner
-    gap: 4px
-
-  .footer-copyright__icon
-    width: 12px
-    height: 12px
-
-  .footer-copyright__note
-    font-size: 14px
-    margin-top: 4px
-
-  .footer-dev
-    margin: 0
-    font-size: 16px
-
-  .footer-dev__link
-    transition: color $default-transition
-    &:hover
-      color: $violet-color
-
-  .footer-up
-    grid-area: up
-    position: static
-    width: 42px
-    height: 42px
-    padding: 10px
-    border-radius: 8px
-    margin-left: auto
-
-  .footer-up__button
-    transition: background-color $default-transition
-    &:hover
-      background-color: $violet-color
+  .footer__title
+    font-size: 48px
+    em
+      font-size: 48px

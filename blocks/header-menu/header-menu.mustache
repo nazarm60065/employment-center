@@ -1,0 +1,11 @@
+{{#menu.isNotEmpty}}
+    <div class="header-menu">
+        <ul class="header-menu-list">
+            {{#menu}}
+                <li class="header-menu-item">
+                    <a href="{{href}}" class="header-menu-item__link">{{{text}}}</a>
+                </li>
+            {{/menu}}
+        </ul>
+    </div>
+{{/menu.isNotEmpty}}

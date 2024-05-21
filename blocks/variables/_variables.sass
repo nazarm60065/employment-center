@@ -1,8 +1,9 @@
 /* Fonts */
-$default-font: 'Onest', Arial, sans-serif
+$default-font: 'Inter', Arial, sans-serif
+$playfair-font: 'PlayfairDisplay', 'Times New Roman', serif
 
 /* Colors */
-$main-color: #3E3E3E
+$main-color: #2F2F2F
 $main-color90: transparentize($main-color, .1)
 $main-color80: transparentize($main-color, .2)
 $main-color70: transparentize($main-color, .3)
@@ -10,19 +11,26 @@ $main-color60: transparentize($main-color, .4)
 $main-color50: transparentize($main-color, .5)
 $main-color40: transparentize($main-color, .6)
 $main-color30: transparentize($main-color, .7)
+$main-color12: transparentize($main-color, .88)
 $main-color10: transparentize($main-color, .9)
 $main-color4: transparentize($main-color, .96)
-$second-color: #2C2B30
-$second-color90: transparentize($second-color, .1)
-$second-color80: transparentize($second-color, .2)
-$second-color70: transparentize($second-color, .3)
-$second-color60: transparentize($second-color, .4)
-$second-color50: transparentize($second-color, .5)
-$second-color10: transparentize($second-color, .9)
 
-$violet-color: #5A5276
-$violet-color32: transparentize($violet-color, .68)
-$violet-color12: transparentize($violet-color, .88)
+$primary: #005DE9
+$primary90: transparentize($primary, .1)
+$primary80: transparentize($primary, .2)
+$primary70: transparentize($primary, .3)
+$primary60: transparentize($primary, .4)
+$primary50: transparentize($primary, .5)
+$primary12: transparentize($primary, .88)
+$primary10: transparentize($primary, .9)
+
+$dark-grey-color: #4D4D4D
+$dark-grey-color64: transparentize($dark-grey-color, .36)
+
+$darkest-grey-color: #2F2F2F
+$darkest-grey-color80: transparentize($darkest-grey-color, .2)
+
+$border-color: #E1E1E1
 
 $light-violet-color: #998BC4
 
@@ -34,26 +42,23 @@ $blue-color: #3181E0
 $bp1: 320px
 $bp2: 768px
 $bp3: 1280px
-$bp4: 1500px
 
 /* Wrappers
   Значения ширины контента контейнера
   */
-$wp1: 428px
+$wp1: 420px
 $wp2: 1024px
-$wp3: 1230px
-$wp4: 1500px
+$wp3: 1440px
 
-$breakpoints: (mobile: $bp1, tablet: $bp2, desktop: $bp3, wide-screen: $bp4)
+$breakpoints: (mobile: $bp1, tablet: $bp2, desktop: $bp3)
 
 /* Container offsets
   Значения отступов контейнера по бокам
   */
 
-$co1: 24px
-$co2: 32px
-$co3: 30px
-$co4: 30px
+$co1: 20px
+$co2: 34px
+$co3: 40px
 
 /* Transition
   Значения времени переходов

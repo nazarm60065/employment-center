@@ -1,0 +1,72 @@
+.header-toggle__button
+  display: flex
+  align-items: center
+  gap: 8px
+  padding: 4px 4px 4px 16px
+  border-radius: 48px
+  background-color: $primary12
+  font-size: 16px
+  font-weight: 500
+  line-height: 1
+  letter-spacing: -0.04em
+  color: $primary
+
+.header-toggle-icon
+  width: 32px
+  height: 32px
+  border-radius: 50%
+  background-color: #fff
+  position: relative
+
+.header-toggle-hamburger
+  position: absolute
+  width: 12px
+  height: 2px
+  left: 10px
+  top: 11px
+  background-color: $primary
+
+.header-toggle-hamburger:before,
+.header-toggle-hamburger:after
+  content: ''
+  position: absolute
+  left: 0
+  width: 100%
+  height: 2px
+  background-color: $primary
+
+.header-toggle-hamburger:before
+  top: 4px
+
+.header-toggle-hamburger:after
+  top: 8px
+
+.header_homepage .header-toggle__button
+  background-color: transparentize(#fff, 0.88)
+  color: #fff
+
+
++mq(tablet)
+  .header-toggle__button
+    font-size: 20px
+    padding: 4px 4px 4px 20px
+    gap: 12px
+
+  .header-toggle-icon
+    width: 40px
+    height: 40px
+
+  .header-toggle-hamburger
+    top: 14px
+    left: 12px
+    width: 16px
+
+  .header-toggle-hamburger:before
+    top: 5px
+
+  .header-toggle-hamburger:after
+    top: 10px
+
++mq(desktop)
+  .header-toggle
+    display: none

@@ -1,0 +1,35 @@
+.header-contacts
+  display: flex
+  gap: 10px
+  line-height: 1
+  letter-spacing: -0.04em
+
+.header-contact__title
+  font-size: 12px
+  color: $dark-grey-color64
+
+.header-contact__value
+  margin-top: 8px
+  color: $primary
+  font-size: 20px
+  font-weight: 600
+
+.header_homepage .header-contact__title
+  color: transparentize(#fff, 0.36)
+
+.header_homepage .header-contact__value
+  color: #fff
+
++mq(tablet, max)
+  .header-contacts
+    display: none
+
++mq(desktop)
+  .header-contacts
+    margin-left: auto
+
+  .header-contact__title
+    font-size: 14px
+
+  .header-contact__value
+    font-size: 24px

@@ -1,156 +1,64 @@
 <?php
 /** @var array $pageConfig */
+
+$mustache = new Mustache_Engine(array(
+    'loader' => new Mustache_Loader_FilesystemLoader($_SERVER['DOCUMENT_ROOT'] . '/local/assets/mustache/'),
+));
 ?>
 
 </main>
+
 <footer class="footer">
     <div class="container">
         <div class="footer-inner">
-            <div class="footer-logo">
-                <img src="/local/assets/images/logo.png" alt="Главная" class="footer-logo__img">
-                <div class="footer-logo__text">Roz Mary</div>
-                <a href="/" class="link-as-card"></a>
+            <div class="footer-bg">
+                <div class="footer-bg__map">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="914" height="569" fill="none" viewBox="0 0 914 569"><path stroke="#1E78FF" stroke-width="8" d="m877.56 537.856-12.31 11.343-24.614-5.92-20.337-4.926-31.035 3.943h-28.897l-11.771 10.858L716.488 564l-32.107-5.92-13.377-24.167-15.52-14.316s-18.193-9.863-18.193-13.818-20.337-18.744-20.337-18.744l-25.686-3.943-10.705-23.681-24.62-17.761-17.12-15.784-23.547-5.92-8.56-20.721-21.41-8.881-12.843-11.841-42.806-3.954h-22.475l-25.687 12.835-32.107-4.938-24.62 7.898h-26.753l-36.397 24.664-17.12 15.784-15.508-24.652-6.954-12.836h-18.199l-5.349-21.206-9.1-12.836 16.054-8.88v-6.903h-8.56l-14.448-14.304-11.771-1.48 2.671-25.162-6.954-11.355-7.494-19.241-17.12-7.886-12.31 15.784-12.843-4.441-1.073-16.778-8.56-7.886-12.573-3.214-13.113 12.095-6.421 14.801-21.943-5.435-6.954-12.326 12.843-14.801-7.494-11.355-14.449 4.44-18.724-4.44-12.908-12.013L5 206.594l18.719-17.252 20.729-16.026H65.17l9.697-8.94 11.693 10.787 16.041 3.079 7.353-6.779h21.397l8.694 10.479s13.37 1.48 13.37 0 4.007-14.789 4.007-14.789l26.739 4.925 9.356-8.626 19.394-3.7 18.05 7.401 22.726 20.952 17.377-7.389 19.393-4.316 8.689-11.1 14.705 6.163 10.698-9.864h12.034l11.366 10.479 42.44-39.127 23.066 3.386v-13.551l28.75-9.864 20.722 3.7s20.299-11.331 21.39-12.326c1.092-1.006-1.335-20.342-1.335-20.342l34.759-19.111 32.763-24.652 8.502 4.452 13.723-6.323 11.899-13.925 17.159-2.32 14.866-13.706L635.866 5l19.213 10.118-7.321 17.3s1.811 13.492.456 13.492-13.266 16.873-13.266 16.873v30.365l-7.321-.834-5.946 13.492 11.43 17.714v13.492l-12.804 6.755-7.784 16.453 13.73 15.18 26.084 3.374 9.151-7.596 16.921-5.061 29.738 37.12 12.811-10.544 13.267.426 19.669-26.57 20.356-6.962 7.09-6.543-4.572-18.56 5.484-15.6 20.812-3.594 11.212-10.325 11.437-18.56 19.906-1.895 18.527 17.081 5.484 29.951 19.675 12.652-7.783 24.468-34.766 11.805-18.764-.414-8.463 10.74 21.737 20.04.918 13.078-19.213 19.833-2.287 28.679-18.301 15.611-.918 13.493-14.641 16.026 12.811 17.714-10.063 16.873 4.354 39.856 11.661 10.751h10.981l11.899 16.873 9.151-8.43 23.336 2.101 4.116 15.612 20.132 13.493 1.83 13.924 9.151 2.102 11.899 8.443.918 23.622-10.435 3.872 4.784 15.446-4.983 11.657 2.241 21.823-23.047-5.429Z" opacity=".8"/></svg>
+                </div>
+                <div class="footer-bg__heart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21" fill="none" viewBox="0 0 24 21">
+                        <path fill="#fff"
+                              d="M21.577 2.186A5.95 5.95 0 0 0 19.643.844a5.767 5.767 0 0 0-4.561 0 5.949 5.949 0 0 0-1.934 1.342L12 3.38l-1.148-1.193A5.85 5.85 0 0 0 6.637.374a5.85 5.85 0 0 0-4.214 1.812A6.312 6.312 0 0 0 .678 6.563c0 1.641.628 3.215 1.745 4.376l1.149 1.192L12 20.884l8.428-8.753 1.149-1.192a6.21 6.21 0 0 0 1.292-2.008 6.395 6.395 0 0 0 0-4.737 6.21 6.21 0 0 0-1.292-2.008Z"/>
+                    </svg>
+                </div>
             </div>
-            <div class="footer-menu">
-                <ul class="footer-menu-list">
-                    <li class="footer-menu-list-item">
-                        <a href="#" class="footer-menu-list-item__link">О бренде</a>
-                    </li>
-                    <li class="footer-menu-list-item">
-                        <a href="#" class="footer-menu-list-item__link">Каталог</a>
-                    </li>
-                    <li class="footer-menu-list-item">
-                        <a href="#" class="footer-menu-list-item__link">Доставка и оплата</a>
-                    </li>
-                </ul>
+            <div class="footer-top">
+                <?= $mustache->render('footer-logo', ['isMainPage' => $pageConfig['isMainPage']]) ?>
+                <div class="footer__title">
+                    Амурская область —<br>
+                    <em>
+                        безграничные карьерные<br>
+                        возможности
+                    </em>
+                </div>
             </div>
             <div class="footer-button-container">
-                <a href="#" class="button button_linear-violet footer__button">Кабинет партнера</a>
+                <button class="footer__button" type="button">
+                    <span class="footer__button-inner">
+                        <span class="footer__button-text">Хочу в регион</span>
+                        <span class="footer__button-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                                 viewBox="0 0 20 20"><path fill="#fff"
+                                                           d="M4.167 8.75h-1.25v2.5h1.25v-2.5Zm0 2.5h11.666v-2.5H4.166v2.5Z"/><path
+                                        stroke="#fff" stroke-linecap="square" stroke-width="2.5"
+                                        d="M10 4.167 15.833 10 10 15.834"/></svg>
+                        </span>
+                    </span>
+                </button>
             </div>
-            <div class="footer-contacts">
-                <div class="footer-tel-mode">
-                    <div class="footer-tel">
-                        <div class="footer-tel__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
-                                <path fill="#9484C1"
-                                      d="m15.893 12.754-.08-.24c-.188-.561-.805-1.146-1.371-1.3l-2.098-.574c-.569-.155-1.38.053-1.796.47l-.76.761a8.061 8.061 0 0 1-5.666-5.68l.76-.761c.416-.417.624-1.23.469-1.8l-.572-2.103C4.624.957 4.04.339 3.482.153l-.24-.081c-.56-.187-1.357.002-1.773.42L.333 1.63c-.203.203-.332.781-.332.783a13.46 13.46 0 0 0 3.924 9.652A13.398 13.398 0 0 0 13.524 16c.019 0 .612-.127.815-.33l1.136-1.138c.416-.417.604-1.217.418-1.777Z"/>
-                            </svg>
-                        </div>
-                        <!--noindex-->
-                        <a href="tel:+79851448085" class="footer-tel__link" rel="nofollow">+7 (985) 144-80-85</a>
-                        <!--/noindex-->
-                    </div>
-                    <div class="footer-mode">
-                <span class="footer-mode__text">
-                    <b>Режим работы:</b> С 10:00 до 19:00 по МСК
-                </span>
-                    </div>
-                </div>
-                <div class="footer-contacts-item">
-                    <div class="footer-contacts-item__icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" fill="none" viewBox="0 0 17 13">
-                            <path fill="#9484C1"
-                                  d="M8.295 8.13 5.884 6.186l-5.246 6.08h15.318l-5.247-6.14-2.414 2.002ZM16.53.666H.063l8.234 6.797L16.53.667ZM11.071 5.82l5.5 6.44V1.249l-5.5 4.572ZM0 1.248V12.26L5.5 5.82 0 1.248Z"/>
-                        </svg>
-                    </div>
-                    <div class="footer-contacts-item__text">
-                        <!--noindex-->
-                        E-mail: <a href="mailto:info@rozmary.shop" class="footer-contacts-item__link" rel="nofollow">info@rozmary.shop</a>
-                        <!--/noindex-->
-                    </div>
-                </div>
-                <div class="footer-contacts-item">
-                    <div class="footer-contacts-item__icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
-                            <path fill="#9484C1" fill-rule="evenodd"
-                                  d="M5.764 4.064c-.155-.372-.272-.386-.508-.396a4.53 4.53 0 0 0-.268-.009c-.305 0-.625.09-.818.287-.235.24-.818.8-.818 1.947 0 1.148.837 2.258.95 2.413.118.155 1.632 2.544 3.982 3.518 1.839.762 2.384.691 2.803.602.61-.132 1.377-.583 1.57-1.129.193-.545.193-1.011.136-1.11-.056-.098-.211-.155-.446-.272-.235-.118-1.378-.682-1.594-.758-.212-.08-.414-.051-.574.174-.225.316-.446.635-.625.828-.141.15-.372.17-.564.09-.259-.109-.983-.363-1.876-1.158-.691-.615-1.162-1.382-1.298-1.612-.136-.236-.014-.372.094-.499.118-.146.23-.25.348-.386.118-.136.183-.207.259-.367.08-.155.023-.315-.033-.432-.057-.118-.527-1.266-.72-1.731ZM7.998 0C3.588 0 0 3.588 0 8c0 1.75.564 3.372 1.523 4.689L.527 15.66l3.075-.982A7.937 7.937 0 0 0 8.002 16C12.412 16 16 12.411 16 8s-3.587-8-7.998-8h-.004Z"
-                                  clip-rule="evenodd"/>
-                        </svg>
-                    </div>
-                    <div class="footer-contacts-item__text">
-                        <!--noindex-->
-                        <a href="https://wa.me/79851448085" class="footer-contacts-item__link" target="_blank"
-                           rel="nofollow">Консультация<br class="desktop-only"> по подбору косметики</a>
-                        <!--/noindex-->
-                    </div>
-                </div>
-            </div>
-            <div class="footer-socials">
-                <div class="footer-socials__title">Присоединяйтесь <br>в социальных сетях:</div>
-                <div class="footer-socials-list">
-                    <div class="footer-socials-item">
-                        <!--noindex-->
-                        <a href="#" class="footer-socials-item__link" rel="nofollow" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="12" fill="none" viewBox="0 0 19 12">
-                                <path fill="#9080BF"
-                                      d="M17.954.766c.128-.442 0-.766-.607-.766h-2.011c-.512 0-.746.28-.874.588 0 0-1.023 2.583-2.471 4.258-.468.488-.682.642-.937.642-.127 0-.312-.154-.312-.596V.766c0-.53-.148-.766-.574-.766h-3.16a.492.492 0 0 0-.512.479c0 .501.724.617.799 2.031v3.067c0 .672-.117.794-.374.794-.68 0-2.339-2.593-3.323-5.56C3.407.233 3.213 0 2.7 0H.69c-.575 0-.69.28-.69.588 0 .553.681 3.29 3.174 6.908 1.661 2.471 4 3.81 6.132 3.81 1.277 0 1.435-.297 1.435-.81V8.63c0-.594.122-.714.526-.714.297 0 .809.156 2.002 1.346 1.362 1.412 1.588 2.046 2.354 2.046h2.01c.574 0 .86-.298.696-.885-.18-.584-.832-1.434-1.696-2.44-.47-.574-1.17-1.192-1.384-1.5-.298-.399-.212-.574 0-.928 0 .001 2.45-3.573 2.705-4.788Z"/>
-                            </svg>
-                        </a>
-                        <!--/noindex-->
-                    </div>
-                    <div class="footer-socials-item">
-                        <!--noindex-->
-                        <a href="#" class="footer-socials-item__link" rel="nofollow" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 14 14">
-                                <path fill="#9080BF"
-                                      d="M8.91 6.75a2.16 2.16 0 1 1-4.32 0 2.16 2.16 0 0 1 4.32 0Zm4.59-2.97v5.94a3.784 3.784 0 0 1-3.78 3.78H3.78A3.784 3.784 0 0 1 0 9.72V3.78A3.784 3.784 0 0 1 3.78 0h5.94a3.784 3.784 0 0 1 3.78 3.78ZM9.99 6.75a3.24 3.24 0 1 0-6.48 0 3.24 3.24 0 0 0 6.48 0Zm1.08-3.51a.81.81 0 1 0-1.62 0 .81.81 0 0 0 1.62 0Z"/>
-                            </svg>
-                        </a>
-                        <!--/noindex-->
-                    </div>
-                    <div class="footer-socials-item">
-                        <!--noindex-->
-                        <a href="#" class="footer-socials-item__link" rel="nofollow" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" fill="none" viewBox="0 0 15 13">
-                                <path fill="#9080BF"
-                                      d="M13.272.148.475 5.452c-.515.247-.69.741-.125 1.01l3.283 1.121 7.938-5.273c.434-.33.877-.242.495.122L5.25 9.066l-.214 2.808c.198.434.561.436.793.22l1.886-1.918 3.23 2.6c.75.477 1.16.17 1.32-.706l2.12-10.783c.22-1.077-.156-1.552-1.112-1.14Z"/>
-                            </svg>
-                        </a>
-                        <!--/noindex-->
-                    </div>
-                </div>
-            </div>
-            <div class="footer-link-list">
-                <div class="footer-link-list-item">
-                    <a href="#" class="footer__link">Политика конфиденциальности</a>
-                </div>
-                <div class="footer-link-list-item">
-                    <a href="#" class="footer__link">Пользовательское соглашение</a>
-                </div>
-                <div class="footer-link-list-item">
-                    <a href="#" class="footer__link">Публичная оферта</a>
-                </div>
-            </div>
+            <?= $mustache->render('footer-contacts', include $_SERVER['DOCUMENT_ROOT'] . '/context/footer/contacts.php') ?>
             <div class="footer-bottom">
-                <div class="footer-copyright">
-                    <div class="footer-copyright-inner">
-                        <div class="footer-copyright__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
-                                <circle cx="4.184" cy="4.184" r="3.835" stroke="#9B9B9B" stroke-width=".697"/>
-                                <path fill="#9B9B9B"
-                                      d="M4.347 6.33c-.322 0-.606-.05-.851-.146a1.721 1.721 0 0 1-.606-.422 1.881 1.881 0 0 1-.36-.652 2.927 2.927 0 0 1-.116-.844c0-.307.041-.588.123-.844.087-.255.215-.475.383-.66.169-.183.374-.33.614-.437.24-.107.519-.16.836-.16.225 0 .432.025.621.076.195.046.366.125.514.238.148.107.276.245.384.414.107.164.181.363.222.598h-.905a.64.64 0 0 0-.3-.398.987.987 0 0 0-.551-.146c-.195 0-.36.036-.499.107a.932.932 0 0 0-.337.292c-.087.122-.151.266-.192.43a2.258 2.258 0 0 0 .007 1.004c.041.159.105.297.192.414.092.113.207.205.345.276.138.067.305.1.499.1.23 0 .42-.051.568-.153a.665.665 0 0 0 .291-.407h.897c-.04.23-.117.43-.23.598-.107.17-.24.307-.398.415a1.713 1.713 0 0 1-.53.237 2.69 2.69 0 0 1-.621.07Z"/>
-                            </svg>
-                        </div>
-                        <div class="footer-copyright__text">
-                            <?= date('Y') ?> Roz Mary
-                        </div>
-                    </div>
-                    <div class="footer-copyright__note">Все права защищены.</div>
-                </div>
                 <div class="footer-dev">
-                    <span class="footer-dev__title">Разработка сайта</span>
                     <!--noindex-->
-                    <a href="https://t.me/avoutenko" class="footer-dev__link" rel="nofollow" target="_blank">@avoutenko</a>
+                    <a href="https://t.me/sturmlaterne" class="footer-dev__item" rel="nofollow" target="_blank">Sturmlaterne</a>
+                    <span class="footer-dev__item">×</span>
+                    <a href="https://prymery.com/" class="footer-dev__item" rel="nofollow" target="_blank">Prymery</a>
                     <!--/noindex-->
                 </div>
-            </div>
-            <div class="footer-up">
-                <button class="footer-up__button" type="button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="19" fill="none" viewBox="0 0 8 19">
-                        <path fill="#fff"
-                              d="M4.377 1.071a.533.533 0 0 0-.754 0L.229 4.465a.533.533 0 1 0 .754.755L4 2.203 7.017 5.22a.533.533 0 0 0 .754-.755L4.377 1.071Zm.156 17.462V1.448H3.467v17.085h1.066Z"/>
-                    </svg>
-                </button>
+                <div class="footer-copyright">
+                    © <?=date('Y')?>, Управление занятости населения <br class="desktop-hide">
+                    Амурской области (УЗН Амурской области)
+                </div>
             </div>
         </div>
     </div>

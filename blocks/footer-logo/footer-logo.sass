@@ -1,0 +1,27 @@
+.footer-logo
+  position: relative
+  width: 64px
+  height: 64px
+  border-radius: 50%
+  background-color: #fff
+  padding: 11px
+  margin-bottom: 35px
+  flex-shrink: 0
+  +svg
+
+.header_homepage .footer-logo path
+  fill: #fff
+
++mq(tablet)
+  .footer-logo
+    order: 2
+    margin-top: 8px
+    width: 88px
+    height: 88px
+    padding: 15px
+
++mq(desktop)
+  .footer-logo
+    width: 160px
+    height: 160px
+    padding: 28px
