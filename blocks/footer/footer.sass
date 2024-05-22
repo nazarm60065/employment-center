@@ -108,12 +108,12 @@
   line-height: 1
   letter-spacing: -0.04em
 
-
 +mq(tablet)
   .footer
     padding-top: 64px
-    border-radius: 48px 48px 0 0
 
+  .footer:before
+    border-radius: 48px 48px 0 0
 
   .footer-bg
     top: 64px
@@ -137,3 +137,110 @@
     font-size: 48px
     em
       font-size: 48px
+
+  .footer-button-container
+    margin-top: 40px
+
+  .footer-bottom
+    margin-top: 64px
+    border-top: 1px solid transparentize(#fff, 0.76)
+    padding-top: 16px
+    padding-bottom: 20px
+    display: flex
+    align-items: center
+
+  .footer-copyright
+    border-top: none
+    margin-top: 0
+    padding-top: 0
+    width: 280px
+    font-size: 14px
+    order: -1
+
+  .footer-dev
+    margin-left: auto
+    font-size: 20px
+
++mq(desktop)
+  .footer
+    padding-top: 80px
+
+  .footer:before
+    border-radius: 60px 60px 0 0
+
+  .footer-container
+    max-width: 1760px
+
+  .footer-bg
+    top: -20px
+    right: 40px
+    width: 700px
+    height: 436px
+
+  .footer-bg__heart
+    width: 48px
+    height: 48px
+    right: 188px
+    bottom: 30px
+
+  .footer__title
+    font-size: 60px
+    em
+      font-size: 60px
+  .footer-button-container
+    margin-top: 48px
+
+  .footer__button
+    font-size: 20px
+    border-width: 4px
+    padding: 3px
+
+  .footer__button-inner
+    padding: 9px 9px 9px 46px
+    transition: background-color $default-transition, color $default-transition
+
+  .footer__button:hover .footer__button-inner
+    background-color: $primary
+    color: #fff
+
+  .footer-bottom
+    margin-top: 56px
+    padding-bottom: 24px
+
+  .footer-copyright
+    width: auto
+    font-size: 16px
+
+  .footer-dev
+    gap: 8px
+    font-size: 20px
+
+  .footer-dev a
+    transition: color $default-transition
+
+  .footer-dev a:hover
+    color: transparentize(#fff, 0.36)
+
++mq(wide-screen)
+  .footer
+    padding-top: 96px
+
+  .footer:before
+    border-radius: 80px 80px 0 0
+
+  .footer-bg
+    top: -40px
+    right: 106px
+    width: 904px
+    height: 559px
+
+  .footer-bg__heart
+    width: 56px
+    height: 56px
+    right: 252px
+    bottom: 48px
+
+  .footer__title
+    font-size: 80px
+    em
+      font-size: 80px

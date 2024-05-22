@@ -17,7 +17,20 @@ $pageConfig = [
 /** @var Mustache_Engine $mustache */
 ?>
 
-<section style="background-color: #003DA7; height: 400px;"></section>
+    <section class="homepage-top">
+        <div class="homepage-top-bg">
+            <picture class="homepage-top-bg__picture">
+                <source media="(max-width: 767px)" srcset="/local/assets/images/homepage-top/image-mobile.jpg">
+                <source media="(max-width: 1279px)" srcset="/local/assets/images/homepage-top/image-tablet.jpg">
+                <img src="/local/assets/images/homepage-top/image.jpg"
+                     alt="Амурская область — безграничные карьерные возможности" class="homepage-top-bg__img"
+                     loading="lazy">
+            </picture>
+        </div>
+        <div class="container homepage-top-container">
+
+        </div>
+    </section>
 
 <? include 'include/footer.php';
 

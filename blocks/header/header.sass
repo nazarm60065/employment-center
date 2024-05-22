@@ -2,6 +2,9 @@
 @import "../header-toggle/header-toggle"
 @import "../header-contacts/header-contacts"
 @import "../header-menu/header-menu"
+@import "../header-modal/header-modal"
+@import "../header-modal-contacts/header-modal-contacts"
+@import "../header-modal-menu/header-modal-menu"
 
 .header
   position: absolute
@@ -31,6 +34,9 @@
     gap: 32px
 
 +mq(desktop)
+  .header-container
+    max-width: 1760px
+
   .header-inner
     padding: 24px 0 20px
 

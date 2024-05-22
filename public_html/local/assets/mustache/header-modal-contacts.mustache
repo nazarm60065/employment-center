@@ -1,23 +1,23 @@
 {{#items.isNotEmpty}}
-    <div class="footer-contacts">
+    <div class="header-modal-contacts">
         {{#items}}
-            <div class="footer-contact{{#socials.isNotEmpty}} footer-contact_socials{{/socials.isNotEmpty}}">
-                <div class="footer-contact-inner">
-                    <div class="footer-contact-title-container">
+            <div class="header-modal-contact{{#socials.isNotEmpty}} header-modal-contact_socials{{/socials.isNotEmpty}}">
+                <div class="header-modal-contact-inner">
+                    <div class="header-modal-contact-title-container">
                         {{#title}}
-                            <div class="footer-contact__title">
+                            <div class="header-modal-contact__title">
                                 {{{.}}}
                             </div>
                         {{/title}}
-                        <div class="footer-contact-title-filler"></div>
+                        <div class="header-modal-contact-title-filler"></div>
                     </div>
-                    <div class="footer-contact__value">
+                    <div class="header-modal-contact__value">
                         {{#socials.isNotEmpty}}
-                            <div class="footer-contacts-socials">
+                            <div class="header-modal-contacts-socials">
                                 {{#socials}}
-                                    <div class="footer-contacts-social">
+                                    <div class="header-modal-contacts-social">
                                         <!--noindex-->
-                                        <a href="{{href}}" class="footer-contacts-social__link" rel="nofollow"
+                                        <a href="{{href}}" class="header-modal-contacts-social__link" rel="nofollow"
                                            target="_blank">{{{text}}}</a>
                                         <!--/noindex-->
                                     </div>
@@ -26,7 +26,7 @@
                         {{/socials.isNotEmpty}}
                         {{#link}}
                             <!--noindex-->
-                            <a href="{{href}}" class="footer-contact__link" rel="nofollow">{{{text}}}</a>
+                            <a href="{{href}}" class="header-modal-contact__link" rel="nofollow">{{{text}}}</a>
                             <!--/noindex-->
                         {{/link}}
                         {{^link}}

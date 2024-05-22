@@ -9,7 +9,7 @@ $mustache = new Mustache_Engine(array(
 </main>
 
 <footer class="footer">
-    <div class="container">
+    <div class="container footer-container">
         <div class="footer-inner">
             <div class="footer-bg">
                 <div class="footer-bg__map">

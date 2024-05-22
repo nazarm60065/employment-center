@@ -1,0 +1,11 @@
+{{#menu.isNotEmpty}}
+    <div class="header-modal-menu">
+        <ul class="header-modal-menu-list">
+            {{#menu}}
+                <li class="header-modal-menu-item">
+                    <a href="{{href}}" class="header-modal-menu-item__link">{{{text}}}</a>
+                </li>
+            {{/menu}}
+        </ul>
+    </div>
+{{/menu.isNotEmpty}}

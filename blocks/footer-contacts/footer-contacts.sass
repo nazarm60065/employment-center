@@ -62,3 +62,69 @@
 
 .footer-contacts-social:last-child:after
   display: none
+
++mq(tablet)
+  .footer-contacts
+    display: flex
+    flex-wrap: wrap
+    gap: 40px
+    justify-content: space-between
+
+  .footer-contact
+    width: 310px
+    margin: 0
+
+  .footer-contact_socials
+    display: flex
+    justify-content: flex-end
+
+  .footer-contact_socials .footer-contact
+    width: auto
+
+  .footer-contact__value
+    font-size: 36px
+
+  +mq(desktop, max)
+    .footer-contact:first-child
+      width: 100%
+      padding-right: calc(100% - 310px)
+
++mq(desktop)
+  .footer-contacts
+    margin-top: 132px
+
+  .footer-contact
+    width: auto
+
+  .footer-contact__title
+    font-size: 24px
+
+  .footer-contact__value
+    margin-top: 20px
+    font-size: 40px
+
+  .footer-contacts-socials
+    gap: 24px 64px
+
+  .footer-contacts-social:after
+    left: calc(100% + 24px)
+
+  .footer-contact__link
+    transition: color $default-transition
+
+  .footer-contact__link:hover
+    color: transparentize(#fff, 0.36)
+
+  .footer-contacts-social__link
+    transition: color $default-transition
+
+  .footer-contacts-social__link:hover
+    color: transparentize(#fff, 0.36)
+
++mq(wide-screen)
+  .footer-contact__title
+    font-size: 28px
+
+  .footer-contact__value
+    margin-top: 24px
+    font-size: 48px

@@ -1,8 +1,9 @@
 .header-toggle__button
+  position: relative
   display: flex
   align-items: center
   gap: 8px
-  padding: 4px 4px 4px 16px
+  padding: 12px 44px 12px 17px
   border-radius: 48px
   background-color: $primary12
   font-size: 16px
@@ -10,13 +11,33 @@
   line-height: 1
   letter-spacing: -0.04em
   color: $primary
+  transition: $default-transition
+
+.page_menu-opened .header-toggle__button
+  padding: 12px 17px 12px 44px
+
+.page_menu-opened .header-toggle-icon
+  left: 4px
+
+.page_menu-opened .header-toggle-hamburger
+  transform: rotate(45deg)
+  top: 15px
+
+.page_menu-opened .header-toggle-hamburger:before
+  transform: translateY(-4px) rotate(90deg)
+
+.page_menu-opened .header-toggle-hamburger:after
+  transform: translateY(-8px)
 
 .header-toggle-icon
+  position: absolute
+  top: 4px
+  left: calc(100% - 36px)
   width: 32px
   height: 32px
   border-radius: 50%
   background-color: #fff
-  position: relative
+  transition: left $default-transition
 
 .header-toggle-hamburger
   position: absolute
@@ -25,6 +46,7 @@
   left: 10px
   top: 11px
   background-color: $primary
+  transition: $default-transition
 
 .header-toggle-hamburger:before,
 .header-toggle-hamburger:after
@@ -34,6 +56,7 @@
   width: 100%
   height: 2px
   background-color: $primary
+  transition: transform $default-transition
 
 .header-toggle-hamburger:before
   top: 4px
@@ -49,12 +72,25 @@
 +mq(tablet)
   .header-toggle__button
     font-size: 20px
-    padding: 4px 4px 4px 20px
+    padding: 14px 56px 14px 20px
     gap: 12px
+
+  .page_menu-opened .header-toggle__button
+    padding: 14px 20px 14px 56px
+
+  .page_menu-opened .header-toggle-hamburger
+    top: 19px
+
+  .page_menu-opened .header-toggle-hamburger:before
+    transform: translateY(-5px) rotate(90deg)
+
+  .page_menu-opened .header-toggle-hamburger:after
+    transform: translateY(-10px)
 
   .header-toggle-icon
     width: 40px
     height: 40px
+    left: calc(100% - 44px)
 
   .header-toggle-hamburger
     top: 14px

@@ -22,8 +22,12 @@
     transition: $default-transition
     &:hover
       color: $primary
-      
-  .header_homepage .header-menu-item__link:hover
+
+  .header-menu-item__link_active
+    color: $primary
+
+  .header_homepage .header-menu-item__link:hover,
+  .header_homepage .header-menu-item__link_active
     color: #fff
 
 @media screen and (min-width: 1600px)

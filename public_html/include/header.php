@@ -25,7 +25,7 @@ $mustache = new Mustache_Engine(array(
 </head>
 <body class="page">
 <header class="header<? if ($pageConfig['isMainPage']) echo ' header_homepage' ?>">
-    <div class="container">
+    <div class="container header-container">
         <div class="header-inner">
             <?=$mustache->render('header-logo', ['isMainPage' => $pageConfig['isMainPage']])?>
             <div class="header-content">
@@ -36,6 +36,19 @@ $mustache = new Mustache_Engine(array(
         </div>
     </div>
 </header>
+<div class="header-modal header_homepage">
+    <div class="header-modal-overlay"></div>
+    <div class="container header-modal-container">
+        <div class="header-modal-top">
+            <?=$mustache->render('header-logo', ['isMainPage' => $pageConfig['isMainPage']])?>
+            <?=$mustache->render('header-toggle')?>
+        </div>
+        <div class="header-modal-content">
+            <?=$mustache->render('header-modal-menu', include $_SERVER['DOCUMENT_ROOT'] . '/context/header/menu.php')?>
+            <?=$mustache->render('header-modal-contacts', include $_SERVER['DOCUMENT_ROOT'] . '/context/footer/contacts.php')?>
+        </div>
+    </div>
+</div>
 <main class="main">
     <? if (empty($pageConfig['notShowNavChain'])) include 'breadcrumbs.php' ?>
 

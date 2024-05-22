@@ -1,0 +1,90 @@
+.header-modal
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: $primary
+  color: #ffffff
+  overflow: hidden
+  z-index: -1
+  opacity: 0
+  visibility: hidden
+  transition: opacity $default-transition, visibility 0s $default-transition, z-index 0s $default-transition
+
+.header-modal-overlay
+  +absoluteFluid
+  cursor: pointer
+  background: #1111117A
+  z-index: -1
+
+.page_menu-opened .header-modal
+  opacity: 1
+  visibility: visible
+  z-index: 1001
+  transition: opacity $default-transition, visibility 0s, z-index 0s
+
+.header-modal_ready
+  display: block
+
+.header-modal-container
+  height: 100%
+  display: flex
+  flex-direction: column
+
+.header-modal-top
+  padding: 16px 0
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-shrink: 0
+
+.header-modal-content
+  height: 100%
+  min-height: 0
+  overflow: hidden auto
+  padding: 16px 6px 40px 0
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  
+.header-modal-content::-webkit-scrollbar
+  width: 2px
+  background-color: transparentize(#fff, 0.8)
+  
+.header-modal-content::-webkit-scrollbar-thumb
+  width: 2px
+  background-color: #fff
+
++mq(tablet)
+  .header-modal
+    background-color: transparent
+
+  .header-modal .header-logo
+    display: none
+
+  .header-modal .header-toggle
+    margin-left: auto
+
+  .header-modal-overlay
+    transition: $default-transition 0s
+    backdrop-filter: blur(0)
+
+  .page_menu-opened .header-modal-overlay
+    transition: $default-transition $default-transition
+    backdrop-filter: blur(8px)
+
+  .header-modal-container
+    width: 384px
+    margin-left: auto
+    margin-right: 0
+    background-color: $primary
+
+  .header-modal-top
+    padding-top: 28px
+    padding-bottom: 20px
+
++mq(desktop)
+  .header-modal
+    display: none
+

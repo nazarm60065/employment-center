@@ -1,0 +1,64 @@
+.header-modal-contacts
+  margin-top: 48px
+
+.header-modal-contact
+  width: 242px
+  margin-bottom: 24px
+  &:last-child
+    margin-bottom: 0
+
+.header-modal-contact-title-container
+  position: relative
+  width: 100%
+  display: flex
+  align-items: center
+  gap: 16px
+
+.header-modal-contact__title
+  font-family: $playfair-font
+  font-size: 20px
+  font-style: italic
+  flex-shrink: 0
+  font-weight: 500
+  line-height: 1
+  letter-spacing: -0.02em
+  color: transparentize(#fff, 0.36)
+
+.header-modal-contact-title-filler
+  width: 100%
+  min-width: 0
+  padding-top: 6px
+  overflow: hidden
+
+.header-modal-contact-title-filler:before
+  content: ''
+  display: block
+  width: 100%
+  height: 2px
+  background-color: transparentize(#fff, 0.36)
+
+.header-modal-contact__value
+  margin-top: 16px
+  font-size: 28px
+  font-weight: 600
+  line-height: 1
+  letter-spacing: -0.04em
+
+.header-modal-contacts-socials
+  margin-top: 12px
+  display: flex
+  flex-wrap: wrap
+  gap: 16px 42px
+  font-family: $playfair-font
+
+.header-modal-contacts-social
+  position: relative
+
+.header-modal-contacts-social:after
+  content: '/'
+  position: absolute
+  left: calc(100% + 16px)
+  color: transparentize(#fff, 0.76)
+
+.header-modal-contacts-social:last-child:after
+  display: none
