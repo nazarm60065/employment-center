@@ -1,0 +1,31 @@
+.homepage-features-tabs
+  overflow: visible
+  margin-bottom: 24px
+
+.homepage-features-tab
+  width: auto
+  font-family: $playfair-font
+  font-size: 16px
+  font-style: italic
+  font-weight: 600
+  line-height: 1
+  letter-spacing: -0.02em
+  border: 1px solid
+  padding: 2px 12px 7px
+  border-radius: 24px
+  background-color: #fff
+  color: #888
+  cursor: pointer
+  transition: color $default-transition, border $default-transition
+
+.homepage-features-tab_active
+  color: $primary
+
++mq(tablet)
+  .homepage-features-tabs
+    margin-bottom: 32px
+
++mq(desktop)
+  .homepage-features-tab
+    padding: 5px 15px 10px
+    font-size: 20px

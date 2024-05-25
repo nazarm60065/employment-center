@@ -1,0 +1,300 @@
+.homepage-career
+  background-color: $primary
+  color: #fff
+  padding: 40px 0
+  border-radius: 32px
+
+.homepage-career__title
+  font-size: 29px
+  font-weight: 600
+  line-height: 26px
+  letter-spacing: -0.04em
+  em
+    font-family: $playfair-font
+    font-size: 32px
+    font-style: italic
+    font-weight: 600
+    line-height: 28.8px
+    letter-spacing: -0.02em
+
+.homepage-career-count
+  position: relative
+  z-index: 0
+  margin-top: 6px
+  display: flex
+  gap: 12px
+  font-family: $playfair-font
+  font-weight: 600
+  line-height: 1
+  letter-spacing: -0.02em
+
+.homepage-career-count__bg
+  position: absolute
+  top: -9px
+  left: -10px
+  z-index: -1
+  width: 228px
+  height: 110px
+  +svg
+
+.homepage-career-count__title
+  font-size: 16px
+  margin-top: 14px
+
+.homepage-career-count__value
+  font-size: 64px
+
+.homepage-career-count__text
+  font-family: $default-font
+  margin-top: 12px
+  letter-spacing: -0.04em
+  font-size: 16px
+  max-width: 170px
+
+
+.homepage-career-card
+  position: relative
+  background-color: rgba(255, 255, 255, 0.08)
+  border-radius: 16px
+  padding: 24px
+  display: flex
+  align-items: flex-end
+  min-height: 140px
+  overflow: hidden
+
+.homepage-career-card__title
+  font-size: 24px
+  font-weight: 600
+  line-height: 1
+  letter-spacing: -0.04em
+
+.homepage-career-card__count
+  position: absolute
+  top: 24px
+  right: 28px
+  background-color: #fff
+  border-radius: 30px
+  border: 2px solid $primary
+  outline: 4px solid #fff
+  color: $primary
+  font-size: 18px
+  font-weight: 600
+  line-height: 16.2px
+  letter-spacing: -0.04em
+  padding: 6px 15px
+
+.homepage-career-card-img-wrapper
+  position: absolute
+  width: 120px
+  height: 120px
+  bottom: -28px
+  right: 24px
+  object-fit: contain
+  border-radius: 16px
+  z-index: 0
+  transform: rotate(4deg)
+
+.homepage-career-card-img-wrapper:before
+  content: ''
+  position: absolute
+  top: -12px
+  left: -46px
+  width: 100%
+  height: calc(100% + 12px)
+  background-color: rgba(255, 255, 255, 0.16)
+  border-radius: 16px 16px 0 0
+  transform: rotate(-6deg)
+  z-index: -1
+
+.homepage-career-card__img
+  width: 100%
+  height: 100%
+  border-radius: 16px
+
++mq(tablet, max)
+  .homepage-career-card
+    margin-bottom: 12px
+    &:last-child
+      margin-bottom: 0
+
+  .homepage-career-expander
+    margin-top: 30px
+    position: relative
+
+  .homepage-career-expander_unset .homepage-career-expander-hidden
+    overflow: unset
+
+  .homepage-career-expander-hidden
+    position: relative
+    overflow: hidden
+    transition: max-height 0.6s
+
+  .homepage-career-expander-toggle-container
+    margin-top: 44px
+    text-align: center
+
+  .homepage-career-expander__toggle
+    padding: 17px 46px
+
+  .homepage-career-link-container
+    margin-top: 24px
+
+  .homepage-career__link
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 16px
+    font-weight: 600
+    line-height: 1
+    letter-spacing: -0.04em
+    gap: 8px
+
+  .homepage-career__link-icon
+    width: 24px
+    height: 24px
+    flex-shrink: 0
+    +svg
+
++mq(tablet)
+  .homepage-career
+    padding: 56px 0 68px
+
+  .homepage-career-top
+    margin-bottom: 48px
+    padding-right: 120px
+
+  .homepage-career__title
+    font-size: 48px
+    line-height: 43.2px
+    em
+      font-size: 50px
+      line-height: 45px
+      
+  .homepage-career-inner
+    position: relative
+
+  .homepage-career-count
+    position: absolute
+    top: 96px
+    right: -10px
+    margin: 0
+
+  .homepage-career-count__bg
+    width: 320px
+    height: 154px
+    top: -20px
+    left: -42px
+
+  .homepage-career-count__title
+    top: 20px
+
+  .homepage-career-count__value
+    font-size: 88px
+
+  .homepage-career-count__text
+    margin-top: 16px
+    max-width: none
+
+  .homepage-career-list
+    display: grid
+    gap: 20px
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+
+
+  .homepage-career-expander-toggle-container
+    display: none
+
+  .homepage-career-link-container
+    margin-top: 40px
+    text-align: center
+
+  .homepage-career__link
+    display: inline-block
+    background-color: #fff
+    color: $primary
+    border-radius: 54px
+    border: 3px solid
+    outline: 4px solid #fff
+    font-size: 18px
+    font-weight: 600
+    line-height: 1
+    letter-spacing: -0.04em
+    padding: 16px 46px
+
+  .homepage-career__link-icon
+    display: none
+
+  +mq(desktop, max)
+    .homepage-career-card:nth-child(even)
+      transform: translateY(90px)
++mq(desktop)
+  .homepage-career
+    padding: 104px 0 112px
+
+  .homepage-career__title
+    font-size: 64px
+    line-height: 58px
+    max-width: 780px
+    padding: 0
+    em
+      font-size: 66px
+      line-height: 60px
+
+  .homepage-career-top
+    margin-bottom: 56px
+
+  .homepage-career-count
+    top: 32px
+    right: 0
+    gap: 8px
+
+  .homepage-career-count__title
+    font-size: 20px
+    margin-top: 15px
+
+  .homepage-career-count__value
+    font-size: 104px
+
+  .homepage-career-count__text
+    font-size: 20px
+    margin-top: 10px
+
+  .homepage-career-list
+    grid-template-columns: repeat(3, minmax(0, 1fr))
+    gap: 24px
+
+  .homepage-career-card__title
+    max-width: 240px
+
++mq(wide-screen)
+  .homepage-career-card
+    min-height: 176px
+    padding: 24px 32px
+
+  .homepage-career-card__title
+    font-size: 28px
+
+  .homepage-career-card-img-wrapper
+    width: 160px
+    height: 160px
+    right: 56px
+    bottom: -26px
+
+
+  .homepage-career-card__count
+    font-size: 20px
+    line-height: 18px
+
+  .homepage-career-link-container
+    margin-top: 56px
+    padding: 6px 16px
+
+  .homepage-career__link
+    padding: 20px 46px
+    font-size: 20px
+    transition: color $default-transition, background-color $default-transition
+
+  .homepage-career__link:not(:disabled):hover
+    background-color: $primary
+    color: #fff
+

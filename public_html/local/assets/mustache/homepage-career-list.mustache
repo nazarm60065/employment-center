@@ -1,0 +1,22 @@
+{{#items.isNotEmpty}}
+    <div class="homepage-career-list">
+        {{#items}}
+            <div class="homepage-career-card"{{#staMainId}} id="{{.}}"{{/staMainId}}>
+                <div class="homepage-career-card-img-wrapper">
+                    {{#image}}
+                        <img src="{{src}}" alt="{{alt}}" class="homepage-career-card__img" loading="lazy">
+                    {{/image}}
+                </div>
+                {{#title}}
+                    <div class="homepage-career-card__title">{{{.}}}</div>
+                {{/title}}
+                {{#count}}
+                    <div class="homepage-career-card__count">{{{.}}}</div>
+                {{/count}}
+                {{#detailPageUrl}}
+                    <a href="{{.}}" class="link-as-card"></a>
+                {{/detailPageUrl}}
+            </div>
+        {{/items}}
+    </div>
+{{/items.isNotEmpty}}

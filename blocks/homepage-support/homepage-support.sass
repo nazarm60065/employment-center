@@ -1,0 +1,269 @@
+.homepage-support
+  position: relative
+  padding: 110px 0 72px
+  overflow: hidden
+
+.homepage-support-inner
+  position: relative
+  z-index: 0
+
+.homepage-support__bg
+  position: absolute
+  width: 397px
+  height: 245px
+  top: 15px
+  left: -120px
+  z-index: -1
+  +svg
+
+.homepage-support__title
+  font-size: 28px
+  font-weight: 600
+  line-height: 25.2px
+  letter-spacing: -0.04em
+  text-align: center
+  em
+    font-family: $playfair-font
+    font-style: italic
+    color: $primary
+
+.homepage-support__subtitle
+  font-size: 16px
+  line-height: 19.2px
+  letter-spacing: -0.04em
+  text-align: center
+  margin-top: 16px
+
+.homepage-support-hint
+  position: absolute
+
+.homepage-support-hint_1
+  top: -40px
+  left: 0
+
+.homepage-support-hint_2
+  top: 190px
+  right: 0
+
+.homepage-support-hint
+  display: flex
+  align-items: center
+  gap: 16px
+  padding: 4px 28px 4px 4px
+  background-color: #D9DFE37A
+  border-radius: 48px
+  backdrop-filter: blur(8px)
+  z-index: 1
+
+.homepage-support-hint__icon
+  width: 40px
+  height: 40px
+  flex-shrink: 0
+  +svg
+
+.homepage-support-hint__title
+  font-size: 16px
+  font-weight: 500
+  line-height: 1
+  letter-spacing: -0.04em
+
+.homepage-support-hint-hidden-inner .homepage-support-hint__title
+  padding-top: 12px
+
+.homepage-support-hint-hidden-inner
+  display: flex
+  gap: 16px
+
+.homepage-support-hint__text
+  font-size: 16px
+  font-weight: 500
+  line-height: 19.2px
+  letter-spacing: -0.04em
+  color: #4D4D4D
+  margin-top: 12px
+
+
+.homepage-support-gallery
+  margin-top: 52px
+  position: relative
+  height: 294px
+  z-index: 0
+
+.homepage-support-item
+  position: absolute
+  width: 170px
+  height: 256px
+  overflow: hidden
+  border-radius: 16px
+  outline: 2px solid #fff
+  left: 50%
+  margin-left: -85px
+
+.homepage-support-item:nth-child(1)
+  top: 0
+  transform: rotate(-4deg) translateX(calc(-100% + 15px))
+
+.homepage-support-item:nth-child(2)
+  top: 0
+  transform: rotate(2deg)
+  z-index: 1
+
+.homepage-support-item:nth-child(3)
+  top: -8px
+  transform: rotate(11deg) translateX(calc(100% - 20px))
+
+.homepage-support-item__img
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+
+.homepage-support__link
+  position: absolute
+  top: 150px
+  left: 50%
+  transform: translateX(-50%)
+  padding: 17px 47px
+  z-index: 2
+  white-space: nowrap
+
+
++mq(tablet)
+  .homepage-support
+    padding: 125px 0 105px
+
+  .homepage-support__bg
+    width: 583px
+    height: 360px
+    top: 108px
+    left: -90px
+
+  .homepage-support__title
+    font-size: 48px
+    line-height: 43.2px
+    margin: 0 -20px
+    em
+      font-size: 50px
+      line-height: 45px
+
+  .homepage-support__subtitle
+    font-size: 20px
+    line-height: 24px
+    margin-top: 20px
+
+
+  .homepage-support-hint
+    padding: 8px 32px 8px 8px
+    font-size: 18px
+    border-radius: 64px
+
+  .homepage-support-hint__icon
+    width: 48px
+    height: 48px
+
+  .homepage-support-hint-hidden-inner .homepage-support-hint__title
+    padding-top: 16px
+  .homepage-support-hint_1
+    top: -45px
+    left: -20px
+
+  .homepage-support-hint_2
+    top: 220px
+    right: -20px
+  .homepage-support-gallery
+    margin-top: 30px
+    height: 370px
+
+  .homepage-support-item
+    width: 217px
+    height: 326px
+
+  .homepage-support-item:nth-child(1)
+    top: 4px
+    transform: rotate(-4deg) translateX(calc(-100% + 10px))
+
+  .homepage-support-item:nth-child(3)
+    top: -8px
+    transform: rotate(11deg) translateX(calc(100% - 15px))
+
+  .homepage-support__link
+    top: 235px
+    font-size: 18px
+    padding: 17px 47px
+
+
++mq(desktop, max)
+  .homepage-support-hint-hidden
+    display: none
+    width: 100%
+    max-width: 320px
+    padding: 8px 32px 24px 8px
+    background-color: #fff
+    border-radius: 32px
+
+    .f-button.is-close-btn
+      display: none
+
+
+  .homepage-support-map__close
+    display: block
+    position: absolute
+    right: 0
+    bottom: calc(100% + 8px)
+    width: 40px
+    height: 40px
+    background-color: #fff
+    border-radius: 50%
+    border: 1px solid #C4C4C4
+    padding: 6px
+    outline: solid 4px #fff
+    +svg
+
++mq(desktop)
+  .homepage-support-hint__link,
+  .homepage-support-map__close,
+  .homepage-support-hint>.homepage-support-hint__icon,
+  .homepage-support-hint>.homepage-support-hint__title
+    display: none
+
+  .homepage-support-hint
+    max-width: 410px
+    border-radius: 32px
+
+  .homepage-support-hint__title
+    font-size: 20px
+
+  .homepage-support-hint__text
+    opacity: 0
+    height: 0
+
+
++mq(wide-screen)
+  .homepage-support
+    padding-top: 160px
+
+  .homepage-support__title
+    font-size: 80px
+    line-height: 72px
+    em
+      font-size: 84px
+      line-height: 76px
+
+  .homepage-support-hint__title
+    font-size: 24px
+
+  .homepage-support-hint__icon
+    width: 56px
+    height: 56px
+
+  .homepage-support-hint-hidden-inner
+    gap: 20px
+
+  .homepage-support-hint__text
+    font-size: 18px
+    margin-top: 12px
+
+
+
+
+

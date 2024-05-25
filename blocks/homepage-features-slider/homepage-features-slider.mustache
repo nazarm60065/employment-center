@@ -1,0 +1,24 @@
+{{#items.isNotEmpty}}
+    <div class="homepage-features-slider swiper">
+        <div class="swiper-wrapper">
+            {{#items}}
+                <div class="swiper-slide homepage-features-slide" data-tab="{{tab}}" data-index="{{index}}{{#staMainId}} id="{{.}}"{{/staMainId}}">
+                    <div class="homepage-features-slide-labels">
+                        <div class="homepage-features-slide__label">{{{label}}}</div>
+                    </div>
+                    <div class="homepage-features-slide-img-wrapper">
+                        {{#image}}
+                            <img src="{{src}}" alt="{{alt}}" class="homepage-features-slide__img" loading="lazy">
+                        {{/image}}
+                    </div>
+                    {{#title}}
+                        <div class="homepage-features-slide__title">{{{.}}}</div>
+                    {{/title}}
+                    {{#text}}
+                        <div class="homepage-features-slide__text">{{{.}}}</div>
+                    {{/text}}
+                </div>
+            {{/items}}
+        </div>
+    </div>
+{{/items.isNotEmpty}}

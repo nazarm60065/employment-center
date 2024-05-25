@@ -18,23 +18,18 @@ return [
             'active' => false,
         ],
         [
-            'title' => 'экономика',
+            'title' => 'культура',
             'tab' => '4',
             'active' => false,
         ],
         [
-            'title' => 'культура',
+            'title' => 'инфраструктура',
             'tab' => '5',
             'active' => false,
         ],
         [
             'title' => 'ресурсы',
             'tab' => '6',
-            'active' => false,
-        ],
-        [
-            'title' => 'инфраструктура',
-            'tab' => '7',
             'active' => false,
         ],
     ])
