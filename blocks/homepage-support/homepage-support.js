@@ -7,21 +7,23 @@ export default () => {
 
 
   function docClickHandler(event) {
-    const hint = event.target.closest('.homepage-support-hint')
+    if (window.innerWidth >= 1280) {
+      const hint = event.target.closest('.homepage-support-hint')
 
-    if (hint) {
-      if (hint.classList.contains('homepage-support-hint_active')) {
-        hideHint(hint)
+      if (hint) {
+        if (hint.classList.contains('homepage-support-hint_active')) {
+          hideHint(hint)
+        } else {
+          showHint(hint)
+        }
       } else {
-        showHint(hint)
-      }
-    } else {
-      const hintActive = document.querySelectorAll('.homepage-support-hint_active')
+        const hintActive = document.querySelectorAll('.homepage-support-hint_active')
 
-      if (hintActive.length) {
-        hintActive.forEach(hint => {
-         hideHint(hint)
-        })
+        if (hintActive.length) {
+          hintActive.forEach(hint => {
+            hideHint(hint)
+          })
+        }
       }
     }
   }

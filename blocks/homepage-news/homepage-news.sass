@@ -1,0 +1,158 @@
+.homepage-news
+  overflow: hidden
+  margin: 48px 0
+  border-bottom: 1px solid #E1E1E1
+  padding-bottom: 64px
+
+.homepage-news__title
+  font-size: 32px
+  font-weight: 600
+  line-height: 28.8px
+  letter-spacing: -0.04em
+
+.homepage-news-list
+  margin-top: 32px
+  overflow: visible
+
+.homepage-news-item
+  border: 1px solid #E1E1E1CC
+  padding: 8px 8px 32px
+  border-radius: 32px
+  height: auto
+
+.homepage-news-item-img-wrapper
+  padding-bottom: 58.47%
+  position: relative
+  width: 100%
+  border-radius: 24px
+  overflow: hidden
+  margin-bottom: 16px
+
+.homepage-news-item-img-inner
+  +absoluteFluid
+
+.homepage-news-item__img
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+.homepage-news-item__title
+  font-size: 20px
+  font-weight: 600
+  line-height: 22px
+  letter-spacing: -0.04em
+
+
+.homepage-news-link-container
+  margin-top: 32px
+  text-align: center
+
+.homepage-news__link
+  display: inline-block
+  padding: 17px 46px
+
+
++mq(tablet, max)
+  .homepage-news-link-container_tablet
+    display: none
+
++mq(tablet)
+  .homepage-news
+    margin: 80px 0
+    padding-bottom: 104px
+
+  .homepage-news__title
+    font-size: 48px
+    line-height: 43.2px
+
+  .homepage-news-top
+    display: flex
+    justify-content: space-between
+
+
+  .homepage-news-list
+    margin-top: 58px
+
+  .homepage-news-item
+    width: 464px
+    border-radius: 40px
+    padding: 15px 15px 40px
+
+  .homepage-news-item-img-wrapper
+    margin-bottom: 24px
+
+  .homepage-news-item__title
+    font-size: 24px
+    line-height: 26.4px
+
+  .homepage-news-link-container
+    margin: 0
+
+  .homepage-news-link-container_mobile
+    display: none
+
+  .homepage-news__link
+    padding: 17px 47px
+    font-size: 18px
++mq(desktop, max)
+
++mq(desktop)
+  .homepage-news
+    margin: 104px 0
+    padding-bottom: 120px
+
+  .homepage-news__title
+    font-size: 64px
+    line-height: 57.6px
+
+  .homepage-news__link
+    padding: 20px 46px
+    font-size: 20px
+
+  .homepage-news-list
+    margin-top: 64px
+
+  .homepage-news-item
+    opacity: 0
+    transition: opacity $default-transition
+
+  .homepage-news-item.swiper-slide-fully-visible
+    opacity: 1
+
+  .homepage-news-item:hover .homepage-news-item__img
+    filter: grayscale(0%)
+
+  .homepage-news-item__img
+    filter: grayscale(100%)
+    transition: $default-transition
+
+  .homepage-news__arrow
+    position: absolute
+    top: 140px
+    width: 64px
+    height: 64px
+    border-radius: 50%
+    border: 2px solid #fff
+    outline: 8px solid #1111113D
+    background-color: #1111113D
+    backdrop-filter: blur(8px)
+    padding: 14px
+    transition: $default-transition
+    z-index: 4
+    +svg
+
+    path
+      transition: $default-transition
+
+  .homepage-news__arrow:not(.slider__arrow_disabled):hover
+    border-color: $primary
+    path
+      stroke: $primary
+
+  .homepage-news__arrow_prev
+    left: 0
+    margin-left: -40px
+
+  .homepage-news__arrow_next
+    right: 0
+    margin-right: -40px

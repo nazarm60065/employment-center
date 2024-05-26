@@ -1,0 +1,12 @@
+<div class="form-group">
+    <label class="form-label">
+        {{#icon}}
+            <span class="form__control-icon">
+                {{{.}}}
+            </span>
+        {{/icon}}
+        <textarea name="{{code}}"
+            {{#placeholder}} placeholder="{{.}}{{#required}}*{{/required}}"{{/placeholder}}
+                  class="form__control form__textarea{{#requiredCssClass}} {{.}}{{/requiredCssClass}}{{#maskCssClass}} {{.}}{{/maskCssClass}}{{#additionalCssClass}} {{.}}{{/additionalCssClass}}">{{value}}</textarea>
+    </label>
+</div>

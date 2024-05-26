@@ -1,6 +1,7 @@
 .homepage-support
   position: relative
-  padding: 110px 0 72px
+  padding: 110px 0 0
+  margin-bottom: 72px
   overflow: hidden
 
 .homepage-support-inner
@@ -62,6 +63,7 @@
   +svg
 
 .homepage-support-hint__title
+  color: $black-color
   font-size: 16px
   font-weight: 500
   line-height: 1
@@ -131,7 +133,8 @@
 
 +mq(tablet)
   .homepage-support
-    padding: 125px 0 105px
+    padding: 125px 0 0
+    margin-bottom: 105px
 
   .homepage-support__bg
     width: 583px
@@ -224,10 +227,16 @@
     outline: solid 4px #fff
     +svg
 
+  +mq(tablet)
+    .homepage-support-map__close
+      left: 100%
+      right: auto
+      bottom: 100%
+
 +mq(desktop)
   .homepage-support__bg
-    width: 1057px
-    height: 654px
+    width: 800px
+    height: 495px
     top: 90px
     left: -205px
 
@@ -316,6 +325,10 @@
 +mq(wide-screen)
   .homepage-support
     padding-top: 160px
+
+  .homepage-support__bg
+    width: 1057px
+    height: 654px
 
   .homepage-support__title
     font-size: 80px

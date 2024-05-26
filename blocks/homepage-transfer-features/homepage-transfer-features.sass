@@ -1,0 +1,45 @@
+.homepage-transfer-features
+  margin-top: 32px
+
+.homepage-transfer-feature
+  margin-bottom: 24px
+  display: flex
+  gap: 16px
+  &:last-child
+    margin-bottom: 0
+
+.homepage-transfer-feature-icon-container
+  width: 48px
+  flex-shrink: 0
+
+.homepage-transfer-feature__icon
+  width: 100%
+  height: auto
+
+.homepage-transfer-feature__title
+  margin-top: 15px
+  font-size: 18px
+  font-weight: 500
+  line-height: 1
+  letter-spacing: -0.04em
+
++mq(tablet)
+  .homepage-transfer-features
+    margin-top: 0
+    width: 50%
+    padding-right: 40px
+
+  .homepage-transfer-feature__title
+    font-size: 20px
+
++mq(desktop)
+  .homepage-transfer-features
+    max-width: 672px
+    display: grid
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+    gap: 40px 48px
+
+  .homepage-transfer-feature
+    margin: 0
+
+

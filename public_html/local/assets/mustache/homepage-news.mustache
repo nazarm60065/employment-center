@@ -1,0 +1,35 @@
+{{#items.isNotEmpty}}
+    <div class="homepage-news-list swiper">
+        <button class="homepage-news__arrow homepage-news__arrow_prev" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="#fff" stroke-linecap="square" stroke-width="2"
+                      d="m12 19-7-7m0 0 7-7m-7 7h14"/>
+            </svg>
+        </button>
+        <div class="swiper-wrapper">
+            {{#items}}
+                <div class="swiper-slide homepage-news-item"{{#strMainId}} id="{{.}}"{{/strMainId}}>
+                    <div class="homepage-news-item-img-wrapper">
+                        {{#image}}
+                            <div class="homepage-news-item-img-inner">
+                                <img src="{{src}}" alt="{{alt}}" class="homepage-news-item__img" loading="lazy">
+                            </div>
+                        {{/image}}
+                    </div>
+                    {{#title}}
+                        <div class="homepage-news-item__title">{{{.}}}</div>
+                    {{/title}}
+                    {{#detailPageUrl}}
+                        <a href="{{.}}" class="link-as-card"></a>
+                    {{/detailPageUrl}}
+                </div>
+            {{/items}}
+        </div>
+        <button class="homepage-news__arrow homepage-news__arrow_next" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="#fff" stroke-linecap="square" stroke-width="2"
+                      d="m12 5.001 7 7m0 0-7 7m7-7H5"/>
+            </svg>
+        </button>
+    </div>
+{{/items.isNotEmpty}}

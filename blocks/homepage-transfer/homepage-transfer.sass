@@ -1,0 +1,190 @@
+@import "../homepage-transfer-features/homepage-transfer-features"
+
+.homepage-transfer
+  margin: 72px 0 48px
+  border-bottom: 1px solid #E1E1E1
+  padding-bottom: 64px
+
+.homepage-transfer__title
+  font-size: 32px
+  font-weight: 600
+  line-height: 28.8px
+  letter-spacing: -0.04em
+
+  em
+    font-family: $playfair-font
+    font-size: 32px
+    font-style: italic
+    line-height: 28.8px
+    letter-spacing: -0.02em
+    color: $primary
+
+
+.homepage-transfer-info-wrapper
+  margin-top: 24px
+
+.homepage-transfer-info
+  padding-top: 242px
+  position: relative
+  z-index: 0
+
+.homepage-transfer-info-bg
+  position: absolute
+  top: 0
+  width: 300px
+  right: -20px
+  max-height: 100%
+  z-index: -1
+  text-align: right
+
+.homepage-transfer-info-bg__img
+  width: auto
+  height: auto
+  max-width: 100%
+  max-height: 100%
+
+.homepage-transfer-info-box
+  color: #fff
+  background-color: $primary
+  border-radius: 40px
+  padding: 24px 24px 28px
+
+.homepage-transfer-info__title
+  font-family: $playfair-font
+  font-size: 24px
+  font-weight: 600
+  line-height: 1
+  letter-spacing: -0.04em
+
+.homepage-transfer-info__text
+  margin-top: 12px
+  font-size: 16px
+  line-height: 20.8px
+  letter-spacing: -0.04em
+
+.homepage-transfer-info-link-container
+  margin-top: 20px
+
+.homepage-transfer-info__link
+  display: inline-block
+  padding: 14px 31px
+
+.homepage-transfer-point
+  margin-bottom: 40px
+  display: flex
+  align-items: center
+  gap: 16px
+
+.homepage-transfer-point-icon-container
+  width: 48px
+  flex-shrink: 0
+
+.homepage-transfer-point__icon
+  width: 100%
+  height: auto
+
+.homepage-transfer-point__title
+  margin-top: 15px
+  font-size: 18px
+  font-weight: 500
+  line-height: 1
+  letter-spacing: -0.04em
+
++mq(tablet)
+  .homepage-transfer
+    margin: 80px 0
+    padding-bottom: 88px
+
+  .homepage-transfer__title
+    font-size: 48px
+    line-height: 43.2px
+    em
+      font-size: 50px
+      line-height: 45px
+
+  .homepage-transfer-content
+    display: flex
+    align-items: flex-start
+    margin-top: 48px
+
+  .homepage-transfer-info-wrapper
+    width: 50%
+
+  .homepage-transfer-info
+    padding-top: 416px
+
+  .homepage-transfer-info-bg
+    width: auto
+    right: -10px
+
+  .homepage-transfer-point
+    display: block
+    width: 214px
+    margin-left: auto
+    margin-bottom: 40px
+
+  .homepage-transfer-point-icon-container
+    margin-bottom: 16px
+
+  .homepage-transfer-point__title
+    font-size: 20px
+
+  .homepage-transfer-info-box
+    margin-left: -56px
+    padding: 24px 32px 28px
+
+  .homepage-transfer-info__title
+    font-size: 28px
+
+  .homepage-transfer-info__text
+    font-size: 18px
+    line-height: 23.4px
+
+  .homepage-transfer-info-link-container
+    margin-top: 28px
+
+  .homepage-transfer-info__link
+    font-size: 20px
+    padding: 13px 30px
++mq(desktop)
+  .homepage-transfer
+    margin: 104px 0
+    padding-bottom: 120px
+
+  .homepage-transfer-inner
+    position: relative
+    z-index: 0
+
+  .homepage-transfer__title
+    width: 50%
+    font-size: 64px
+    line-height: 57.6px
+    em
+      font-size: 66px
+      line-height: 59.4px
+
+  .homepage-transfer-info-wrapper
+    margin-top: -138px
+
+  .homepage-transfer-info
+    position: static
+    padding: 0
+
+  .homepage-transfer-point
+    width: 260px
+    margin-bottom: 104px
+
+  .homepage-transfer-info-bg
+    width: 420px
+    height: 600px
+    left: 50%
+    right: auto
+    max-height: none
+
+  .homepage-transfer-info-box
+    margin-left: auto
+    width: 445px
+
++mq(wide-screen)
+  .homepage-transfer-info-bg
+    left: calc(50% - 60px)

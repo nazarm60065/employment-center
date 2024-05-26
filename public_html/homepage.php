@@ -318,6 +318,72 @@ $pageConfig = [
             </div>
         </div>
     </section>
+    <section class="homepage-region">
+        <?= $mustache->render('homepage-region', include $_SERVER['DOCUMENT_ROOT'] . '/context/homepage/support/slider.php') ?>
+    </section>
+    <section class="homepage-transfer">
+        <div class="container homepage-transfer-container">
+            <div class="homepage-transfer-inner">
+                <div class="homepage-transfer__title">
+                    Рассказываем, <em>кому <br>
+                        подойдет</em> переезд<br>
+                    в Амурскую область
+                </div>
+                <div class="homepage-transfer-content">
+                    <?= $mustache->render('homepage-transfer-features', include $_SERVER['DOCUMENT_ROOT'] . '/context/homepage/transfer/features.php') ?>
+                    <div class="homepage-transfer-info-wrapper">
+                        <div class="homepage-transfer-point">
+                            <div class="homepage-transfer-point-icon-container">
+                                <img src="/local/assets/images/homepage-transfer/image7.svg"
+                                     alt="Ты не боишься перемен и готов  к новым впечатлениям"
+                                     class="homepage-transfer-point__icon" loading="lazy">
+                            </div>
+                            <div class="homepage-transfer-point__title">Ты не боишься<br
+                                        class="mobile-hide tablet-show"> перемен и готов<br
+                                        class="mobile-hide tablet-show"> к новым
+                                впечатлениям
+                            </div>
+                        </div>
+                        <div class="homepage-transfer-info">
+                            <div class="homepage-transfer-info-bg">
+                                <img src="/local/assets/images/homepage-transfer/person.png"
+                                     alt="Узнаешь себя в описании?"
+                                     class="homepage-transfer-info-bg__img" loading="lazy">
+                            </div>
+                            <div class="homepage-transfer-info-box">
+                                <div class="homepage-transfer-info__title">Узнаешь себя в описании?</div>
+                                <div class="homepage-transfer-info__text">
+                                    Оставь свое контанты, мы свяжемся
+                                    и подберем для тебя подходящую вакансию
+                                </div>
+                                <div class="homepage-transfer-info-link-container">
+                                    <a href="#modal-form" class="button button_filled-white-border homepage-transfer-info__link" data-fancybox>Хочу
+                                        в
+                                        регион!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="homepage-news">
+        <div class="container homepage-news-container">
+            <div class="homepage-news-top">
+                <div class="homepage-news__title">Новости</div>
+                <div class="homepage-news-link-container homepage-news-link-container_tablet">
+                    <a href="#" class="button button_linear-blue homepage-news__link">Все новости</a>
+                </div>
+            </div>
+            <?= $mustache->render('homepage-news', include $_SERVER['DOCUMENT_ROOT'] . '/context/homepage/news/list.php') ?>
+            <div class="homepage-news-link-container homepage-news-link-container_mobile">
+                <a href="#" class="button button_linear-blue homepage-news__link">Все новости</a>
+            </div>
+        </div>
+    </div>
+
+<?= $mustache->render('modal-form', include $_SERVER['DOCUMENT_ROOT'] . '/context/homepage/form.php') ?>
 
 <? include 'include/footer.php';
 

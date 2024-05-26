@@ -1,3 +1,6 @@
 import '../../homepage-features-tabs/homepage-features-tabs.mustache'
 import '../../homepage-features-slider/homepage-features-slider.mustache'
 import '../../homepage-career/homepage-career-list.mustache'
+import '../../homepage-region/homepage-region.mustache'
+import '../../homepage-transfer-features/homepage-transfer-features.mustache'
+import '../../homepage-news/homepage-news.mustache'

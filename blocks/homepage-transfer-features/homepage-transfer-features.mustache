@@ -1,0 +1,16 @@
+{{#items.isNotEmpty}}
+    <div class="homepage-transfer-features">
+        {{#items}}
+            <div class="homepage-transfer-feature"{{#strMainId}} id="{{.}}"{{/strMainId}}>
+                <div class="homepage-transfer-feature-icon-container">
+                    {{#icon}}
+                        <img src="{{.}}" alt="{{title}}" class="homepage-transfer-feature__icon" loading="lazy">
+                    {{/icon}}
+                </div>
+                {{#title}}
+                    <div class="homepage-transfer-feature__title">{{{title}}}</div>
+                {{/title}}
+            </div>
+        {{/items}}
+    </div>
+{{/items.isNotEmpty}}

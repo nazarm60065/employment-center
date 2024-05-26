@@ -13,7 +13,42 @@
   line-height: 1
   letter-spacing: -0.04em
 
+.button_filled-blue-border
+  background-color: $primary
+  color: #fff
+  border-radius: 54px
+  border: 2px solid
+  outline: 4px solid $primary
+  font-size: 16px
+  font-weight: 600
+  line-height: 1
+  letter-spacing: -0.04em
+
+
+.button_linear-blue
+  border-radius: 72px
+  border: 2px solid $primary
+  color: $primary
+  font-size: 16px
+  font-weight: 600
+  line-height: 1
+  letter-spacing: -0.04em
+
++mq(tablet)
+  .button_filled-white-border
+    border-width: 3px
+
+  .button_filled-blue-border
+    border-width: 3px
+
 +mq(desktop)
   .button_filled-white-border:not(:disabled):hover
+    background-color: $primary
+    color: #fff
+
+  .button_filled-blue-border:not(:disabled):hover
+    background-color: #fff
+    color: $primary
+  .button_linear-blue:not(:disabled):hover
     background-color: $primary
     color: #fff
