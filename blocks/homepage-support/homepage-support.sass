@@ -74,14 +74,15 @@
   display: flex
   gap: 16px
 
+.homepage-support-hint-text-container
+  margin-top: 12px
+
 .homepage-support-hint__text
   font-size: 16px
   font-weight: 500
   line-height: 19.2px
   letter-spacing: -0.04em
   color: #4D4D4D
-  margin-top: 12px
-
 
 .homepage-support-gallery
   margin-top: 52px
@@ -162,7 +163,7 @@
     height: 48px
 
   .homepage-support-hint-hidden-inner .homepage-support-hint__title
-    padding-top: 16px
+    padding-top: 14px
   .homepage-support-hint_1
     top: -45px
     left: -20px
@@ -179,17 +180,21 @@
     height: 326px
 
   .homepage-support-item:nth-child(1)
-    top: 4px
-    transform: rotate(-4deg) translateX(calc(-100% + 10px))
+    top: 0
+    transform: rotate(-4deg) translateX(calc(-100% - 25px))
+
+  .homepage-support-item:nth-child(2)
+    transform: rotate(2deg) translateX(-28px)
 
   .homepage-support-item:nth-child(3)
-    top: -8px
-    transform: rotate(11deg) translateX(calc(100% - 15px))
+    top: -7px
+    transform: rotate(11deg) translateX(calc(100% - 38px))
 
   .homepage-support__link
     top: 235px
     font-size: 18px
-    padding: 17px 47px
+    padding: 16px 46px
+    border-width: 3px
 
 
 +mq(desktop, max)
@@ -220,6 +225,25 @@
     +svg
 
 +mq(desktop)
+  .homepage-support__bg
+    width: 1057px
+    height: 654px
+    top: 90px
+    left: -205px
+
+  .homepage-support-hint
+    transition: padding-bottom $default-transition
+
+  .homepage-support-hint_active
+    padding-bottom: 32px
+
+  .homepage-support__title
+    max-width: 780px
+    margin: 0 auto
+
+  .homepage-support__subtitle
+    margin-top: 32px
+
   .homepage-support-hint__link,
   .homepage-support-map__close,
   .homepage-support-hint>.homepage-support-hint__icon,
@@ -229,13 +253,64 @@
   .homepage-support-hint
     max-width: 410px
     border-radius: 32px
+    cursor: pointer
+
+
+  .homepage-support-hint_1
+    left: 0
+    top: -35px
+
+  .homepage-support-hint_2
+    top: 120px
+    right: 0
 
   .homepage-support-hint__title
     font-size: 20px
 
-  .homepage-support-hint__text
-    opacity: 0
+  .homepage-support-hint-text-container
+    position: relative
     height: 0
+    overflow: hidden
+    transition: height $default-transition $default-transition
+
+  .homepage-support-hint_active .homepage-support-hint-text-container
+    transition: height $default-transition 0s
+
+  .homepage-support-hint__text
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    opacity: 0
+    transition: opacity $default-transition 0s
+
+  .homepage-support-hint_active .homepage-support-hint__text
+    opacity: 1
+    transition: opacity $default-transition $default-transition
+
+  .homepage-support-gallery
+    height: 458px
+    margin-top: 32px
+
+  .homepage-support-item
+    width: 264px
+    height: 397px
+
+  .homepage-support-item:nth-child(1)
+    top: -3px
+    transform: rotate(-4deg) translateX(calc(-100% - 38px))
+
+  .homepage-support-item:nth-child(2)
+    transform: rotate(2deg) translateX(-40px)
+
+  .homepage-support-item:nth-child(3)
+    top: -7px
+    transform: rotate(11deg) translateX(calc(100% - 52px))
+
+  .homepage-support__link
+    top: 273px
+    font-size: 20px
+    padding: 19px 46px
 
 
 +mq(wide-screen)
@@ -245,9 +320,18 @@
   .homepage-support__title
     font-size: 80px
     line-height: 72px
+    max-width: 1200px
     em
       font-size: 84px
       line-height: 76px
+
+  .homepage-support__subtitle
+    font-size: 24px
+    line-height: 29px
+
+  .homepage-support-hint_2
+    top: 210px
+    right: -60px
 
   .homepage-support-hint__title
     font-size: 24px
@@ -261,7 +345,6 @@
 
   .homepage-support-hint__text
     font-size: 18px
-    margin-top: 12px
 
 
 

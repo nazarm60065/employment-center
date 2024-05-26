@@ -230,10 +230,13 @@ $pageConfig = [
                             </div>
                             <div class="homepage-support-hint-content">
                                 <div class="homepage-support-hint__title">Социальная поддержка</div>
-                                <div class="homepage-support-hint__text">
-                                    Короткий текст про материальную поддержку, примерно вот такой по объему. Короткий
-                                    текст
-                                    про материальную поддержку, примерно вот такой по объему.
+                                <div class="homepage-support-hint-text-container">
+                                    <div class="homepage-support-hint__text">
+                                        Короткий текст про материальную поддержку, примерно вот такой по объему.
+                                        Короткий
+                                        текст
+                                        про материальную поддержку, примерно вот такой по объему.
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -282,10 +285,13 @@ $pageConfig = [
                             </div>
                             <div class="homepage-support-hint-content">
                                 <div class="homepage-support-hint__title">Материальная поддержка</div>
-                                <div class="homepage-support-hint__text">
-                                    Короткий текст про материальную поддержку, примерно вот такой по объему. Короткий
-                                    текст
-                                    про материальную поддержку, примерно вот такой по объему.
+                                <div class="homepage-support-hint-text-container">
+                                    <div class="homepage-support-hint__text">
+                                        Короткий текст про материальную поддержку, примерно вот такой по объему.
+                                        Короткий
+                                        текст
+                                        про материальную поддержку, примерно вот такой по объему.
+                                    </div>
                                 </div>
                             </div>
                         </div>
