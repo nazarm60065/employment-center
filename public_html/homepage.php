@@ -122,7 +122,7 @@ $pageConfig = [
             </div>
         </div>
     </section>
-    <section class="homepage-career">
+    <section class="homepage-career" id="career">
         <div class="container homepage-career-container">
             <div class="homepage-career-inner">
                 <div class="homepage-career-top">
@@ -368,7 +368,7 @@ $pageConfig = [
             </div>
         </div>
     </section>
-    <div class="homepage-news">
+    <section class="homepage-news">
         <div class="container homepage-news-container">
             <div class="homepage-news-top">
                 <div class="homepage-news__title">Новости</div>
@@ -381,7 +381,13 @@ $pageConfig = [
                 <a href="#" class="button button_linear-blue homepage-news__link">Все новости</a>
             </div>
         </div>
-    </div>
+    </section>
+    <section class="homepage-projects">
+        <div class="container homepage-projects-container">
+            <div class="homepage-projects__title">Проекты</div>
+            <?= $mustache->render('homepage-projects', include $_SERVER['DOCUMENT_ROOT'] . '/context/homepage/projects/list.php') ?>
+        </div>
+    </section>
 
 <?= $mustache->render('modal-form', include $_SERVER['DOCUMENT_ROOT'] . '/context/homepage/form.php') ?>
 

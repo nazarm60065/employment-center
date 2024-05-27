@@ -1,0 +1,38 @@
+{{#items.isNotEmpty}}
+    <div class="swiper homepage-projects-slider">
+        <button class="homepage-projects__arrow homepage-projects__arrow_prev" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="#fff" stroke-linecap="square" stroke-width="2"
+                      d="m12 19-7-7m0 0 7-7m-7 7h14"/>
+            </svg>
+        </button>
+        <div class="swiper-wrapper">
+            {{#items}}
+                <div class="swiper-slide homepage-projects-slide"{{#strMainId}} id="{{.}}"{{/strMainId}}>
+                    <div class="homepage-projects-slide-img-wrapper">
+                        {{#image}}
+                            <div class="homepage-projects-slide-img-inner">
+                                <img src="{{src}}" alt="{{alt}}" class="homepage-projects-slide__img" loading="lazy">
+                            </div>
+                        {{/image}}
+                        <div class="homepage-projects-slide__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#fff" stroke-linecap="square" stroke-width="2" d="M5.833 5.833h8.334m0 0v8.333m0-8.333-8.334 8.333"/></svg>
+                        </div>
+                    </div>
+                    {{#title}}
+                        <div class="homepage-projects-slide__title">{{{.}}}</div>
+                    {{/title}}
+                    {{#detailPageUrl}}
+                        <a href="{{.}}" class="link-as-card"></a>
+                    {{/detailPageUrl}}
+                </div>
+            {{/items}}
+        </div>
+        <button class="homepage-projects__arrow homepage-projects__arrow_next" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="#fff" stroke-linecap="square" stroke-width="2"
+                      d="m12 5.001 7 7m0 0-7 7m7-7H5"/>
+            </svg>
+        </button>
+    </div>
+{{/items.isNotEmpty}}

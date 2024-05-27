@@ -33,7 +33,7 @@ $mustache = new Mustache_Engine(array(
                 </div>
             </div>
             <div class="footer-button-container">
-                <button class="footer__button" type="button">
+                <button class="footer__button anchor" type="button" data-src="#career">
                     <span class="footer__button-inner">
                         <span class="footer__button-text">Хочу в регион</span>
                         <span class="footer__button-icon">

@@ -5,6 +5,7 @@ import homepageCareer from "../../homepage-career/homepage-career"
 import homepageSupport from "../../homepage-support/homepage-support"
 import homepageRegion from "../../homepage-region/homepage-region"
 import homepageNews from "../../homepage-news/homepage-news"
+import homepageProjects from "../../homepage-projects/homepage-projects"
 
 import 'swiper/css'
 import 'swiper/css/effect-fade'
@@ -17,4 +18,5 @@ document.addEventListener('DOMContentLoaded', () => {
   homepageSupport()
   homepageRegion()
   homepageNews()
+  homepageProjects()
 })
