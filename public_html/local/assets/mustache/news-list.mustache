@@ -1,0 +1,27 @@
+{{#items.isNotEmpty}}
+    <div class="news-list">
+        {{#items}}
+            <div class="news-card"{{#strMainId}} id="{{.}}"{{/strMainId}}>
+                <div class="news-card-img-wrapper">
+                    {{#image}}
+                        <div class="news-card-img-inner">
+                            <img src="{{src}}" alt="{{alt}}" class="news-card__img" loading="lazy">
+                        </div>
+                    {{/image}}
+                    {{#section}}
+                        <div class="news-card__section">{{{.}}}</div>
+                    {{/section}}
+                </div>
+                {{#title}}
+                    <div class="news-card__title">{{{.}}}</div>
+                {{/title}}
+                {{#detailPageUrl}}
+                    <a href="{{.}}" class="link-as-card"></a>
+                {{/detailPageUrl}}
+            </div>
+        {{/items}}
+    </div>
+    {{#navigation}}
+        {{>pager}}
+    {{/navigation}}
+{{/items.isNotEmpty}}

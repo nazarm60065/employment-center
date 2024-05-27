@@ -1,22 +1,41 @@
 .breadcrumbs
-  font-size: 12px
-  line-height: 1.37
-  color: $main-color90
+  font-size: 16px
+  font-weight: 500
+  line-height: 14.4px
+  letter-spacing: -0.04em
+  color: $primary
   display: flex
   flex-wrap: wrap
   align-items: flex-start
+  gap: 12px
+  margin-bottom: 28px
 
-.breadcrumbs__item:not(.breadcrumbs__item_last)
-  border-bottom: 1px solid transparent
-  transition: $default-transition
+.breadcrumbs__item_first
+  width: 24px
+  height: 24px
+  +svg
 
-.breadcrumb__del
-  margin: 0 8px
+.breadcrumbs__item:not(.breadcrumbs__item_first)
+  margin-top: 5px
+
+.breadcrumbs__item
+  position: relative
+
+.breadcrumbs__item:before
+  content: '•'
+  margin-right: 12px
+
+.breadcrumbs__item:nth-child(1):before,
+.breadcrumbs__item:nth-child(2):before
+  display: none
 
 .breadcrumbs__item_last
-  font-weight: 500
-  color: $main-color
+  color: #A6A6A6
+
++mq(tablet, max)
+  .breadcrumbs__item_last
+    display: none
 
 +mq(tablet)
   .breadcrumbs
-    font-size: 14px
+    margin-bottom: 32px

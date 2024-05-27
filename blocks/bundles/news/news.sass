@@ -1,0 +1,18 @@
+@import "../../variables/variables"
+@import "../../mixins/mixins"
+@import "../../pager/pager"
+@import "../../news-sections/news-sections"
+@import "../../news-list/news-list"
+
+.news
+  padding-top: 105px
+  padding-bottom: 80px
+
++mq(tablet)
+  .news
+    padding-top: 132px
+
++mq(desktop)
+  .news
+    padding-top: 156px
+    padding-bottom: 120px

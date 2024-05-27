@@ -1,0 +1,31 @@
+{{#items.isNotEmpty}}
+    <div class="pager">
+        {{#nextLink}}
+            <div class="pager-infinite-wrapper">
+                <button class="button button_linear-blue pager__infinite" type="button" data-src="{{.}}">Загрузить еще</button>
+            </div>
+        {{/nextLink}}
+        <div class="pager-inner">
+            {{#prevLink}}
+                <a href="{{.}}" class="pager__btn pager__btn_prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="#C4C4C4" stroke-linecap="square" stroke-width="2" d="m14 17 5-5-5-5M7 17l5-5-5-5"/></svg>
+                </a>
+            {{/prevLink}}
+            <div class="pager-list">
+                {{#items}}
+                    {{#active}}
+                        <span class="pager__link pager__link_active">{{text}}</span>
+                    {{/active}}
+                    {{^active}}
+                        <a href="{{href}}" class="pager__link">{{text}}</a>
+                    {{/active}}
+                {{/items}}
+            </div>
+            {{#nextLink}}
+                <a href="{{.}}" class="pager__btn pager__btn_next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="#C4C4C4" stroke-linecap="square" stroke-width="2" d="m14 17 5-5-5-5M7 17l5-5-5-5"/></svg>
+                </a>
+            {{/nextLink}}
+        </div>
+    </div>
+{{/items.isNotEmpty}}

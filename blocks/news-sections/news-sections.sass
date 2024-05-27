@@ -1,8 +1,10 @@
-.homepage-features-tabs
-  overflow: visible
-  margin-bottom: 24px
+.news-sections-wrapper
+  overflow: hidden
 
-.homepage-features-tab
+.news-sections
+  overflow: visible
+
+.news-section
   width: auto
   font-family: $playfair-font
   font-size: 16px
@@ -18,17 +20,13 @@
   cursor: pointer
   transition: color $default-transition, border $default-transition
 
-.homepage-features-tab_active
+.news-section_active
   color: $primary
 
-+mq(tablet)
-  .homepage-features-tabs
-    margin-bottom: 32px
-
 +mq(desktop)
-  .homepage-features-tab
-    padding: 5px 15px 10px
+  .news-section
+    padding: 5px 16px 8px
     font-size: 20px
 
-  .homepage-features-tab:hover
+  .news-section:hover
     color: $primary

@@ -1,20 +1,26 @@
-{{#breadcrumbs}}
+{{#items.isNotEmpty}}
     <nav class="breadcrumbs">
-        {{#breadcrumbs.items}}
+        {{#items}}
             {{^isLast}}
-                <a href="{{{href}}}" class="breadcrumbs__item">
-                    {{{text}}}
-                </a>
-                <span class="breadcrumb__del"><svg xmlns="http://www.w3.org/2000/svg" width="5" height="10" fill="none"><path stroke="#3E3E3E" d="M.5 1 4 5.5l-3.5 4"/></svg></span>
+                {{#isFirst}}
+                    <a href="{{{href}}}" class="breadcrumbs__item breadcrumbs__item_first">
+                        {{{icon}}}
+                    </a>
+                {{/isFirst}}
+                {{^isFirst}}
+                    <a href="{{{href}}}" class="breadcrumbs__item">
+                        {{{text}}}
+                    </a>
+                {{/isFirst}}
             {{/isLast}}
             {{#isLast}}
                 <span class="breadcrumbs__item breadcrumbs__item_last">
                     {{{text}}}
                 </span>
             {{/isLast}}
-        {{/breadcrumbs.items}}
+        {{/items}}
     </nav>
-{{/breadcrumbs}}
+{{/items.isNotEmpty}}
 {{#schema}}
     <script type="application/ld+json" data-skip-moving="true">{{{.}}}</script>
 {{/schema}}

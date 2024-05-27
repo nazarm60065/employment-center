@@ -38,6 +38,12 @@ textarea
   flex-direction: column
   min-height: 100vh
 
+.page__title
+  font-size: 32px
+  font-weight: 600
+  line-height: 28.8px
+  letter-spacing: -0.04em
+  margin: 0 0 24px
 
 .mobile
   &-hide
@@ -60,6 +66,10 @@ textarea
     &-block
       display: block
 
+  .page__title
+    font-size: 48px
+    line-height: 43.2px
+    margin-bottom: 28px
 
 +mq(desktop, max)
   .desktop-only
@@ -78,6 +88,10 @@ textarea
     &-show
       display: inline
 
+  .page__title
+    font-size: 64px
+    line-height: 64px
+    margin-bottom: 32px
 
 @import "../../button/button"
 @import "../../container/container"

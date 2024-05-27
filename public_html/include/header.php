@@ -49,6 +49,6 @@ $mustache = new Mustache_Engine(array(
         </div>
     </div>
 </div>
-<main class="main">
+<main class="main <?=$pageConfig['main_class']?>">
     <? if (empty($pageConfig['notShowNavChain'])) include 'breadcrumbs.php' ?>
 

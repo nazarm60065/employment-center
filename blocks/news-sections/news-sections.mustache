@@ -1,0 +1,15 @@
+{{#items.isNotEmpty}}
+    <div class="news-sections-wrapper">
+        <div class="container">
+            <div class="news-sections swiper">
+                <div class="swiper-wrapper">
+                    {{#items}}
+                        <div class="swiper-slide news-section{{#active}} news-section_active{{/active}}">
+                            <a href="{{href}}" class="news-section__link">{{{text}}}</a>
+                        </div>
+                    {{/items}}
+                </div>
+            </div>
+        </div>
+    </div>
+{{/items.isNotEmpty}}

@@ -1,0 +1,86 @@
+.pager
+  margin-top: 40px
+  grid-column-start: 1
+  grid-column-end: -1
+
+.pager-infinite-wrapper
+  text-align: center
+
+.pager__infinite
+  display: inline-block
+  padding: 17px 47px
+
+.pager-inner
+  margin-top: 48px
+  display: flex
+  justify-content: center
+  align-items: center
+  gap: 12px
+
+.pager-list
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-wrap: wrap
+  gap: 12px
+
+.pager__btn,
+.pager__link
+  width: 48px
+  height: 48px
+  border-radius: 50%
+  color: #C4C4C4
+  border: 2px solid
+  font-size: 20px
+  font-weight: 600
+  line-height: 1
+  letter-spacing: -0.04em
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  transition: color $default-transition
+
+  &:hover
+    color: $primary
+
+.pager__link_active
+  color: $primary
+
+.pager__btn
+  padding: 10px
+  +svg
+
+  path
+    transition: $default-transition
+
+.pager__btn:hover path
+  stroke: $primary
+
+.pager__btn_prev
+  transform: scale(-1)
+
++mq(tablet, max)
+  .pager-inner
+    display: none
++mq(tablet)
+  .pager
+    margin-top: 48px
+
+  .pager__infinite
+    font-size: 20px
+
++mq(desktop)
+  .pager
+    margin-top: 64px
+    display: flex
+    max-width: 838px
+
+  .pager-infinite-wrapper
+    margin-left: auto
+
+  .pager__infinite
+    padding: 20px 47px
+
+  .pager-inner
+    margin-top: 0
+    order: -1

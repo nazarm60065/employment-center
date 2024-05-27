@@ -11,6 +11,7 @@
 <h1>Проект УЗН АО</h1>
 <ul>
     <li><a href="homepage.php">Главная</a></li>
+    <li><a href="news.php">Новости</a></li>
 </ul>
 </body>
 </html>
