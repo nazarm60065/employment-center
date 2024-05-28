@@ -1,0 +1,261 @@
+@import "../../variables/variables"
+@import "../../mixins/mixins"
+@import "../../vacancies-list/vacancies-list"
+
+.vacancies
+  padding-top: 100px
+
+.vacancies-top
+  position: relative
+  margin-top: 40px
+  background-color: #F3F5F6
+  border-radius: 0 0 48px 48px
+
+.vacancies-top-wrapper
+  padding-bottom: 44px
+
+.vacancies-top:before
+  content: ''
+  position: absolute
+  bottom: 100%
+  height: 200px
+  left: 0
+  right: 0
+  background-color: #F3F5F6
+  z-index: -1
+
+.vacancies-top-counter-and-image
+  position: relative
+  padding: 6px
+
+.vacancies-top-counter
+  position: relative
+  z-index: 1
+  width: 125px
+  background-color: #fff
+  border: 2px solid $primary
+  outline: 6px solid #fff
+  padding: 18px
+  color: $primary
+  border-radius: 30px
+
+.vacancies-top-counter__value
+  font-size: 32px
+  font-weight: 600
+  line-height: 28.8px
+  letter-spacing: -0.04em
+
+.vacancies-top-counter__text
+  font-size: 14px
+  font-weight: 600
+  line-height: 12.6px
+  letter-spacing: -0.04em
+
+
+.vacancies-top-image-wrapper
+  position: absolute
+  right: 0
+  bottom: -20px
+  width: 160px
+  height: 160px
+  line-height: 0
+
+.vacancies-top-image-wrapper:before
+  content: ''
+  position: absolute
+  top: -20px
+  left: -12px
+  width: 100%
+  height: 100%
+  border-radius: 14px
+  background-color: #E1E3E4
+  transform: rotate(-1.85deg)
+
+.vacancies-top-image__img
+  display: inline-block
+  width: 100%
+  height: 100%
+  transform: rotate(3.8deg)
+  border-radius: 14px
+
+.vacancies-top-bg
+  position: absolute
+  top: -28px
+  right: 35px
+  width: 250px
+  height: 140px
+  +svg
+
+.vacancies-top-content
+  margin-top: 36px
+
+.vacancies-top__title
+  margin: 0
+  font-size: 32px
+  font-weight: 600
+  line-height: 28.8px
+  letter-spacing: -0.04em
+
+.vacancies-top__text
+  margin-top: 16px
+  font-size: 16px
+  font-weight: 500
+  line-height: 20.8px
+  letter-spacing: -0.04em
+  color: #4D4D4D
+
+.vacancies-top-link-container
+  margin-top: 28px
+
+.vacancies-top__link
+  display: block
+  padding: 17px 47px
+
++mq(tablet)
+  .vacancies
+    padding-top: 132px
+
+  .vacancies-top
+    margin-top: 32px
+
+  .vacancies-top-wrapper
+    overflow: hidden
+    padding-bottom: 104px
+
+  .vacancies-top-inner
+    position: relative
+    padding-right: 240px
+
+  .vacancies-top-counter-and-image
+    position: absolute
+    width: 300px
+    right: -60px
+    bottom: -40px
+
+  .vacancies-top-counter
+    width: 145px
+    padding: 22px
+
+  .vacancies-top-counter__value
+    font-size: 40px
+    line-height: 36px
+
+  .vacancies-top-counter__text
+    margin-top: 8px
+    font-size: 16px
+    line-height: 14.4px
+
+  .vacancies-top__title
+    font-size: 48px
+    line-height: 43.2px
+
+  .vacancies-top__text
+    margin-top: 24px
+    font-size: 18px
+    line-height: 23.4px
+
+  .vacancies-top-link-container
+    margin-top: 36px
+
+  .vacancies-top__link
+    display: inline-block
+    font-size: 18px
+    padding: 16px 46px
+
+  .vacancies-top-image-wrapper
+    width: 246px
+    height: 246px
+    bottom: 46px
+    left: 40px
+    right: auto
+
+  .vacancies-top-image-wrapper:before
+    top: -38px
+    left: -17px
+
+  .vacancies-top-bg
+    width: 400px
+    height: 224px
+    top: -13px
+    left: -70px
+    right: auto
+    path
+      stroke: $primary
+      stroke-width: 1
+
+  .vacancies-top-content
+    margin: 0
+
++mq(desktop)
+  .vacancies
+    padding-top: 156px
+
+  .vacancies-top
+    border-radius: 0 0 80px 80px
+
+  .vacancies-top-wrapper
+    padding-bottom: 130px
+    overflow: visible
+
+  .vacancies-top-content
+    max-width: 720px
+
+  .vacancies-top__title
+    font-size: 64px
+    line-height: 57.6px
+
+  .vacancies-top__text
+    margin-top: 24px
+    font-size: 20px
+    line-height: 26px
+
+  .vacancies-top-link-container
+    margin-top: 44px
+
+  .vacancies-top__link
+    font-size: 20px
+    padding: 19px 45px
+
+  .vacancies-top-counter-and-image
+    width: 486px
+    right: 0
+    bottom: 0
+
+  .vacancies-top-counter
+    width: 157px
+
+  .vacancies-top-counter__value
+    font-size: 48px
+    line-height: 43.2px
+
+  .vacancies-top-counter__text
+    font-size: 18px
+    line-height: 16.2px
+
+  .vacancies-top-image-wrapper
+    width: 374px
+    height: 374px
+    left: 130px
+    bottom: -52px
+
+  .vacancies-top-image__img
+    border-radius: 32px
+
+  .vacancies-top-image-wrapper:before
+    top: -50px
+    left: -55px
+    border-radius: 32px
+
+  .vacancies-top-bg
+    width: 540px
+    height: 302px
+    left: -150px
+    top: -29px
+
++mq(wide-screen)
+  .vacancies-top-counter-and-image
+    right: 30px
+
+  .vacancies-top-bg
+    width: 570px
+    height: 320px

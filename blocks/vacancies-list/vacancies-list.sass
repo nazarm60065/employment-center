@@ -1,0 +1,170 @@
+.vacancies-list-wrapper
+  margin: 48px 0
+  border-bottom: 1px solid #E1E1E1
+  padding-bottom: 64px
+
+.vacancies-list__title
+  margin-bottom: 32px
+  font-size: 32px
+  font-weight: 600
+  line-height: 28.8px
+  letter-spacing: -0.04em
+
+.vacancies-list
+  display: grid
+  grid-template-columns: 1fr
+  gap: 16px
+
+.vacancies-card
+  position: relative
+  background-color: #F3F5F6
+  border-radius: 24px
+  padding: 20px 24px
+
+.vacancies-card__title
+  font-size: 20px
+  font-weight: 600
+  line-height: 22px
+  letter-spacing: -0.04em
+  margin-bottom: 16px
+
+.vacancies-card-item
+  display: flex
+  gap: 8px
+  margin-bottom: 8px
+  font-size: 16px
+  font-weight: 500
+  line-height: 14.4px
+  letter-spacing: -0.04em
+  color: #4D4D4D
+
+.vacancies-card-item__icon
+  flex-shrink: 0
+  width: 20px
+  height: 20px
+  +svg
+
+.vacancies-card-salary
+  margin-top: 16px
+  display: flex
+  gap: 12px
+  color: $primary
+  font-size: 20px
+  font-weight: 600
+  line-height: 18px
+  letter-spacing: -0.04em
+
+.vacancies-card-salary__icon
+  flex-shrink: 0
+  width: 28px
+  height: 28px
+  +svg
+
+.vacancies-card-salary__value
+  margin-top: 5px
+
+.vacancies-list-link-container
+  margin-top: 32px
+  text-align: center
+
+.vacancies-list__link
+  display: inline-block
+  padding: 17px 47px
+
++mq(tablet)
+  .vacancies-list-wrapper
+    margin: 80px 0
+    padding-bottom: 102px
+
+  .vacancies-list__title
+    margin-bottom: 48px
+    font-size: 48px
+    line-height: 43.2px
+
+  .vacancies-list
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+    gap: 20px
+
+  .vacancies-card
+    display: flex
+    flex-direction: column
+    gap: 16px
+    padding: 24px
+
+  .vacancies-card__title
+    font-size: 24px
+    line-height: 26.4px
+    width: 100%
+    margin-bottom: 0
+
+  .vacancies-card-content
+    width: 100%
+
+  .vacancies-card-salary
+    width: 100%
+    margin-top: auto
+    padding-top: 8px
+    font-size: 24px
+    line-height: 21.6px
+
+  .vacancies-card-salary__icon
+    width: 32px
+    height: 32px
+
+  .vacancies-list-link-container
+    margin-top: 40px
+
+  .vacancies-list__link
+    font-size: 20px
++mq(desktop)
+  .vacancies-list-wrapper
+    margin: 104px 0
+    padding-bottom: 120px
+
+  .vacancies-list__title
+    margin-bottom: 40px
+    font-size: 64px
+    line-height: 57.6px
+
+  .vacancies-list
+    grid-template-columns: repeat(3, minmax(0, 1fr))
+    gap: 24px
+
+  .vacancies-card
+    padding: 32px
+
+  .vacancies-card__title
+    font-size: 28px
+    line-height: 28px
+
+  .vacancies-card-content
+    display: flex
+    flex-wrap: wrap
+    gap: 12px
+    justify-content: space-between
+
+  .vacancies-card-item
+    font-size: 18px
+    line-height: 16.2px
+    margin: 0
+
+  .vacancies-card-item__value
+    margin-top: 2px
+
+  .vacancies-card-company
+    width: 100%
+
+  .vacancies-card-salary
+    font-size: 28px
+    line-height: 25.2px
+    gap: 16px
+
+  .vacancies-card-salary__icon
+    width: 40px
+    height: 40px
+
+  .vacancies-card-salary__value
+    margin-top: 6px
+
+  .vacancies-list__link
+    padding: 20px 46px
