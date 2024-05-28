@@ -12,6 +12,7 @@
 <ul>
     <li><a href="homepage.php">Главная</a></li>
     <li><a href="news.php">Новости</a></li>
+    <li><a href="news-detail.php">Новости детальная</a></li>
 </ul>
 </body>
 </html>

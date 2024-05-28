@@ -3,4 +3,5 @@ module.exports = {
   'bundle-form': './blocks/bundles/form/form',
   'bundle-homepage': './blocks/bundles/homepage/homepage',
   'bundle-news': './blocks/bundles/news/news',
+  'bundle-news-detail': './blocks/bundles/news-detail/news-detail',
 }

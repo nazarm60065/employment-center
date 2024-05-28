@@ -1,0 +1,15 @@
+{{#blockquote}}
+    <blockquote class="article-blockquote">
+        <div class="article-blockquote__text">
+            {{{text}}}
+        </div>
+        <div class="article-blockquote-author">
+            {{#name}}
+                <div class="article-blockquote-author__name">{{{.}}}</div>
+            {{/name}}
+            {{#post}}
+                <div class="article-blockquote-author__post">{{{.}}}</div>
+            {{/post}}
+        </div>
+    </blockquote>
+{{/blockquote}}

@@ -1,0 +1,72 @@
+.article-blockquote
+  margin: 32px 0
+  padding-top: 72px
+  padding-left: 36px
+  position: relative
+  font-size: 20px
+  font-weight: 500
+  line-height: 24px
+  letter-spacing: -0.04em
+  color: $black-color
+  &:first-child
+    margin-top: 0
+
+  &:last-child
+    margin-bottom: 0
+
+.article-blockquote:before
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='57' fill='none' viewBox='0 0 72 57'%3E%3Cpath fill='%23E1E1E1' d='M17.677 57c-3.306 0-6.036-.655-8.192-1.965-2.156-1.31-3.952-3.058-5.39-5.242-1.436-2.33-2.514-4.95-3.233-7.862C.287 39.019 0 36.399 0 34.069c0-7.134 1.796-13.686 5.39-19.655C9.125 8.444 14.801 3.64 22.42 0l1.94 3.931c-4.312 1.893-8.049 4.805-11.21 8.736-3.162 3.93-4.887 7.935-5.174 12.011-.287 2.184-.144 4.222.431 6.115 2.587-2.475 5.749-3.712 9.485-3.712 4.168 0 7.689 1.383 10.563 4.149 2.874 2.62 4.312 6.26 4.312 10.92 0 4.367-1.51 7.934-4.528 10.7C25.366 55.618 21.845 57 17.678 57Zm39.233 0c-3.305 0-6.036-.655-8.191-1.965-2.156-1.31-3.953-3.058-5.39-5.242-1.437-2.33-2.515-4.95-3.233-7.862-.575-2.912-.862-5.532-.862-7.862 0-7.134 1.796-13.686 5.389-19.655C48.359 8.444 54.036 3.64 61.653 0l1.94 3.931c-4.312 1.893-8.048 4.805-11.21 8.736-3.161 3.93-4.886 7.935-5.173 12.011-.288 2.184-.144 4.222.43 6.115 2.587-2.475 5.75-3.712 9.486-3.712 4.167 0 7.688 1.383 10.563 4.149C70.563 33.85 72 37.49 72 42.15c0 4.367-1.509 7.934-4.527 10.7C64.6 55.618 61.078 57 56.91 57Z'/%3E%3C/svg%3E")
+  position: absolute
+  top: 0
+  left: 0
+  width: 72px
+  height: 57px
+
+.article-blockquote__text
+  margin-bottom: 16px
+
+.article-blockquote-author__name
+  color: $primary
+  font-size: 18px
+  font-weight: 500
+  line-height: 21.6px
+  letter-spacing: -0.04em
+
+.article-blockquote-author__post
+  margin-top: 4px
+  color: #888888
+  font-size: 14px
+  font-weight: 400
+  line-height: 16.8px
+  letter-spacing: -0.04em
+
+
++mq(tablet)
+  .article-blockquote
+    margin: 48px 0
+    padding-top: 57px
+    padding-left: 72px
+    font-size: 28px
+    line-height: 33.6px
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+
+  .article-blockquote__text
+    margin-bottom: 24px
+    width: 100%
+
+  .article-blockquote-author__name
+    font-size: 20px
+    line-height: 24px
+
+  .article-blockquote-author__post
+    margin-top: 6px
+    font-size: 16px
+    line-height: 19.2px
+
+
++mq(desktop)
+  .article-blockquote
+    margin: 60px 0 60px 48px
+    max-width: 792px

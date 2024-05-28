@@ -1,0 +1,20 @@
+{{#video}}
+    <div class="article-video-wrapper">
+        <div class="article-video-inner">
+            <picture class="article-video__picture">
+                {{#mobileSrc}}<source srcset="{{.}}" media="(max-width: 767px)">{{/mobileSrc}}
+                {{#tabletSrc}}<source srcset="{{.}}" media="(max-width: 1279px)">{{/tabletSrc}}
+                <img src="{{src}}" alt="{{alt}}" class="article-video__img" loading="lazy">
+                {{#realSrc}}
+                    <a href="{{.}}" class="link-as-card article-video__link" data-fancybox></a>
+                {{/realSrc}}
+            </picture>
+            <div class="article-video__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#fff" d="m5 3 14 9-14 9V3Z"/></svg>
+            </div>
+        </div>
+        {{#description}}
+            <div class="article-video__description">{{{.}}}</div>
+        {{/description}}
+    </div>
+{{/video}}
