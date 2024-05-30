@@ -3,7 +3,7 @@
         <ul class="header-menu-list">
             {{#menu}}
                 <li class="header-menu-item">
-                    <a href="{{href}}" class="header-menu-item__link">{{{text}}}</a>
+                    <a href="{{href}}" class="header-menu-item__link{{#isMainPage}} anchor{{/isMainPage}}"{{#isMainPage}} data-src="{{href}}"{{/isMainPage}}>{{{text}}}</a>
                 </li>
             {{/menu}}
         </ul>

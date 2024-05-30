@@ -1,29 +1,32 @@
 <?
 
+/** @var array $pageConfig */
+
 return [
+    'isMainPage' => $pageConfig['isMainPage'],
     'menu' => collect([
         [
-            'href' => '#',
+            'href' => '#features',
             'text' => 'О регионе',
             'active' => false,
         ],
         [
-            'href' => '#',
+            'href' => '#career',
             'text' => 'Вакансии',
             'active' => false,
         ],
         [
-            'href' => '#',
+            'href' => '#support',
             'text' => 'Меры поддержки',
             'active' => false,
         ],
         [
-            'href' => '#',
+            'href' => '#transfer',
             'text' => 'Кому подойдет',
             'active' => false,
         ],
         [
-            'href' => '#',
+            'href' => '#news',
             'text' => 'Новости',
             'active' => false,
         ],

@@ -1,0 +1,204 @@
+.vacancies-form-wrapper
+  padding: 108px 0 80px
+  overflow: hidden
+  margin-top: -40px
+
+.vacancies-form-wrapper__title
+  font-size: 36px
+  font-weight: 600
+  line-height: 32.4px
+  letter-spacing: -0.04em
+  text-align: center
+  em
+    color: $primary
+    font-family: $playfair-font
+    font-size: 38px
+    font-style: italic
+    line-height: 34.2px
+
+.vacancies-form-inner
+  position: relative
+  z-index: 0
+
+.vacancies-form__icon
+  position: absolute
+  z-index: -2
+  top: -100px
+  left: 50%
+  +svg
+
+.vacancies-form__icon_1
+  width: 480px
+  height: 190px
+  transform: rotate(-22.81deg) translateX(-50%)
+
+.vacancies-form__icon_2
+  width: 480px
+  height: 190px
+  transform: rotate(-46.71deg) translateX(-50%)
+
+.vacancies-form-image
+  position: absolute
+  width: 88px
+  height: 88px
+  border-radius: 20px
+  overflow: hidden
+
+.vacancies-form-image__img
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+.vacancies-form-image_1
+  top: 120px
+  left: -10px
+  transform: rotate(-8.64deg)
+
+.vacancies-form-image_2
+  top: -92px
+  right: -40px
+  transform: rotate(9.56deg)
+
+.vacancies-form-image_3
+  top: 158px
+  right: 20px
+  transform: rotate(-2.39deg)
+
+.vacancies-form__heart
+  margin: 24px auto 0
+  width: 48px
+  height: 48px
+  border-radius: 50%
+  border: 2px solid $primary
+  padding: 8px
+  +svg
+
+.vacancies-form-box
+  margin-top: 60px
+
++mq(tablet)
+  .vacancies-form-wrapper
+    margin-top: -80px
+    padding-top: 150px
+    padding-bottom: 104px
+
+  .vacancies-form-wrapper__title
+    font-size: 64px
+    line-height: 57.6px
+    em
+      font-size: 65px
+      line-height: 58.5px
+
+  .vacancies-form-box
+    margin-top: 48px
+
+  .vacancies-form__icon_1
+    width: 826px
+    height: 327px
+    top: -160px
+    margin-left: -40px
+
+  .vacancies-form__icon_2
+    width: 826px
+    height: 327px
+    top: -180px
+    margin-left: -56px
+    transform: rotate(-60.71deg) translateX(-50%)
+
+  .vacancies-form-image
+    width: 160px
+    height: 160px
+    top: 257px
+    z-index: -1
+    border-radius: 32px
+
+  .vacancies-form-image_1
+    top: 257px
+    left: -77px
+
+  .vacancies-form-image_2
+    top: -124px
+    right: -58px
+
+  .vacancies-form-image_3
+    top: 355px
+    right: -24px
+
+
+  +mq(desktop, max)
+    .vacancies-form__heart
+      margin: 0
+      position: absolute
+      top: 197px
+      right: 100px
+      background-color: #fff
+      width: 88px
+      height: 88px
+      padding: 20px
+
++mq(desktop)
+  .vacancies-form-wrapper
+    padding: 120px 0
+    margin-top: -120px
+
+  .vacancies-form-inner
+    display: flex
+    align-items: flex-start
+    gap: 40px
+
+  .vacancies-form-box
+    width: 496px
+    margin: 0
+    order: -1
+
+
+  .vacancies-form-wrapper__title-container
+    width: 620px
+    padding-top: 120px
+
+  .vacancies-form__icon_1
+    top: 100px
+    left: 560px
+    transform: rotate(-15.46deg)
+
+  .vacancies-form__icon_2
+    top: 240px
+    left: 772px
+    transform: rotate(-35.59deg)
+
+  .vacancies-form-image_1
+    top: 409px
+    left: 531px
+
+  .vacancies-form-image_2
+    top: -5px
+    left: 1287px
+    right: auto
+
+  .vacancies-form-image_3
+    top: 453px
+    left: 1136px
+    right: auto
+
+  .vacancies-form__heart
+    width: 104px
+    height: 104px
+    padding: 18px
+    margin: 48px auto 0
+    background-color: #fff
+
+@media screen and (min-width: 1500px)
+  .vacancies-form-inner
+    gap: 105px
+
+  .vacancies-form-wrapper__title-container
+    width: 750px
+
+  .vacancies-form-wrapper__title
+    font-size: 80px
+    line-height: 72px
+    em
+      font-size: 84px
+      line-height: 75.6px
+
+

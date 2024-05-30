@@ -35,6 +35,7 @@
     "@fancyapps/ui": "^5.0.35",
     "before-after": "^3.0.0",
     "clipboard": "^2.0.11",
+    "gsap": "^3.12.5",
     "inputmask": "^5.0.8",
     "loading-attribute-polyfill": "^2.1.1",
     "lodash": "^4.17.21",

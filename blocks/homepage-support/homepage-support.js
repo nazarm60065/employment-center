@@ -1,8 +1,17 @@
-export default () => {
-  const hint = document.querySelector('.homepage-support-hint')
+import { gsap } from "gsap"
 
-  if (hint) {
+export default () => {
+  const wrapper = document.querySelector('.homepage-support-wrapper'),
+    container = document.querySelector('.homepage-support'),
+    hintList = document.querySelectorAll('.homepage-support-hint')
+
+  let mouseHandlerActive = false
+
+  if (hintList.length) {
     document.addEventListener('click', docClickHandler)
+    wrapper.addEventListener('mouseenter', mouseEnterHandler)
+    wrapper.addEventListener('mouseleave', mouseLeaveHandler)
+    window.addEventListener('mousemove', mouseMoveHandler)
   }
 
 
@@ -45,5 +54,38 @@ export default () => {
     if (text && textContainer) {
       textContainer.style.height = text.scrollHeight + 'px'
     }
+  }
+
+  function mouseEnterHandler() {
+    mouseHandlerActive = window.innerWidth >= 1280
+  }
+
+  function mouseLeaveHandler() {
+    mouseHandlerActive = false
+  }
+
+  function mouseMoveHandler(event) {
+    if (mouseHandlerActive) {
+      const wrapperOffset = container.getBoundingClientRect()
+
+      hintList.forEach((hint, index) => {
+        const position = hint.dataset['shift'];
+
+        parallaxIt(event, hint, position, wrapperOffset)
+      });
+    }
+  }
+
+  function parallaxIt(e, target, movement, wrapperOffset) {
+    let relX = e.pageX - wrapperOffset.left,
+      relY = e.pageY - wrapperOffset.top,
+      x = (relX - wrapperOffset.width / 2) / wrapperOffset.width * movement,
+      y = (relY - wrapperOffset.height / 2) / wrapperOffset.height * movement
+
+    gsap.to(target, {
+      x: x,
+      y: y,
+      duration: 1
+    });
   }
 }

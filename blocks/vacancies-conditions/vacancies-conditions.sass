@@ -1,0 +1,123 @@
+.vacancies-conditions
+  margin: 0 0 48px
+  padding: 48px 0 64px
+  border-bottom: 1px solid #E1E1E1
+  overflow: hidden
+
+.vacancies-conditions__title
+  font-size: 32px
+  font-weight: 600
+  line-height: 28.8px
+  letter-spacing: -0.04em
+
+.vacancies-conditions-features
+  margin-top: 28px
+
+.vacancies-conditions-feature
+  display: flex
+  gap: 12px
+  font-size: 18px
+  font-weight: 500
+  line-height: 19.8px
+  letter-spacing: -0.04em
+  margin-bottom: 16px
+  &:last-child
+    margin-bottom: 0
+
+.vacancies-conditions-feature__icon
+  flex-shrink: 0
+  width: 24px
+  height: 24px
+  background-color: $primary
+  border-radius: 50%
+  padding: 6px
+  +svg
+
+.vacancies-conditions-feature__text
+  margin-top: 2px
+
+.vacancies-image-wrapper
+  margin-top: 40px
+  width: 362px
+  line-height: 0
+
+.vacancies-image__img
+  width: 100%
+  height: auto
+
++mq(tablet)
+  .vacancies-conditions
+    margin-bottom: 80px
+    padding: 80px 0 108px
+
+  .vacancies-conditions__title
+    font-size: 48px
+    font-weight: 600
+    line-height: 43.2px
+    letter-spacing: -0.04em
+
+  .vacancies-conditions-inner
+    display: flex
+    align-items: flex-start
+    gap: 32px
+    margin-top: 30px
+
+  .vacancies-conditions-features
+    margin-top: 18px
+    width: 396px
+    flex-shrink: 0
+
+  .vacancies-conditions-feature
+    margin-bottom: 24px
+    gap: 16px
+    font-size: 20px
+    line-height: 22px
+
+  .vacancies-conditions-feature__icon
+    width: 32px
+    height: 32px
+    padding: 8px
+
+  .vacancies-conditions-feature__text
+    margin-top: 5px
+
+  .vacancies-image-wrapper
+    flex-shrink: 0
+    margin: 0
+
++mq(desktop)
+  .vacancies-conditions
+    margin-bottom: 104px
+    padding: 104px 0
+
+  .vacancies-conditions__title
+    font-size: 64px
+    line-height: 57.6px
+    width: 720px
+
+  .vacancies-conditions-inner
+    margin-top: 48px
+    gap: 44px
+
+  .vacancies-conditions-features
+    width: 888px
+    display: grid
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+    gap: 40px 72px
+
+  .vacancies-conditions-feature
+    font-size: 24px
+    line-height: 26.4px
+    gap: 20px
+
+  .vacancies-conditions-feature__icon
+    width: 40px
+    height: 40px
+    padding: 10px
+
+  .vacancies-conditions-feature__text
+    margin-top: 7px
+
+  .vacancies-image-wrapper
+    width: 552px
+    margin-top: -150px

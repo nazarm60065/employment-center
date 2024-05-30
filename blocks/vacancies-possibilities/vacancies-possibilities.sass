@@ -1,0 +1,86 @@
+.vacancies-possibilities
+  margin: 48px 0
+
+.vacancies-possibilities__title
+  font-size: 32px
+  font-weight: 600
+  line-height: 28.8px
+  letter-spacing: -0.04em
+
+.vacancies-possibilities-list
+  margin-top: 32px
+  display: grid
+  grid-template-columns: 1fr
+  gap: 12px
+
+.vacancies-possibilities-item
+  border-radius: 24px
+  background-color: #F3F5F6
+  padding: 20px 24px
+  font-size: 18px
+  font-weight: 500
+  line-height: 21.6px
+  letter-spacing: -0.04em
+  color: #4D4D4D
+
+.vacancies-possibilities-item__icon
+  margin-bottom: 12px
+  width: 32px
+  height: 32px
+  border: 2px solid $primary
+  padding: 6px
+  border-radius: 50%
+  +svg
+
++mq(tablet)
+  .vacancies-possibilities
+    margin: 80px 0
+
+  .vacancies-possibilities__title
+    font-size: 48px
+    font-weight: 600
+    line-height: 43.2px
+    letter-spacing: -0.04em
+
+  .vacancies-possibilities-list
+    margin-top: 48px
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+    gap: 20px
+
+  .vacancies-possibilities-item
+    padding: 20px 20px 32px
+    font-size: 18px
+    line-height: 21.6px
+
+  .vacancies-possibilities-item__icon
+    width: 40px
+    height: 40px
+    padding: 8px
+    margin-bottom: 16px
+
++mq(desktop)
+  .vacancies-possibilities
+    margin: 104px 0 120px
+
+  .vacancies-possibilities__title
+    font-size: 64px
+    line-height: 57.6px
+
+  .vacancies-possibilities-list
+    gap: 24px
+    grid-template-columns: repeat(3, minmax(0, 1fr))
+
+  .vacancies-possibilities-item
+    font-size: 20px
+    line-height: 24px
+    padding: 24px 24px 32px
+
+  .vacancies-possibilities-item__icon
+    width: 48px
+    height: 48px
+    margin-bottom: 24px
+    padding: 10px
+
+@media screen and (min-width: 1500px)
+  .vacancies-possibilities-list
+    grid-template-columns: repeat(4, minmax(0, 1fr))

@@ -1,6 +1,10 @@
 @import "../../variables/variables"
 @import "../../mixins/mixins"
 @import "../../vacancies-list/vacancies-list"
+@import "../../vacancies-conditions/vacancies-conditions"
+@import "../../vacancies-possibilities/vacancies-possibilities"
+@import "../../vacancies-form/vacancies-form"
+@import "../../vacancies-modal/vacancies-modal"
 
 .vacancies
   padding-top: 100px
@@ -192,6 +196,9 @@
 
   .vacancies-top
     border-radius: 0 0 80px 80px
+
+  .vacancies-top:before
+    height: 400px
 
   .vacancies-top-wrapper
     padding-bottom: 130px
