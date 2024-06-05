@@ -1,7 +1,7 @@
 <?php
 $pageConfig = [
-    'metaTitle' => 'Новости',
-    'title' => 'Новости',
+    'metaTitle' => 'Вакансии',
+    'title' => 'Вакансии',
     'inlineCss' => [
         '/local/assets/local/bundle-common/bundle-common.css',
         '/local/assets/local/bundle-form/bundle-form.css',
@@ -231,26 +231,24 @@ $pageConfig = [
                               opacity=".64"/>
                     </svg>
                 </div>
-                <div class="vacancies-form-image vacancies-form-image_1">
+                <div class="vacancies-form-image vacancies-form-image_1" data-shift="-100">
                     <img src="/local/assets/images/vacancies/image1.jpg"
                          alt="Приезжайте строить карьеру в Амурской области" class="vacancies-form-image__img"
                          loading="lazy">
                 </div>
-                <div class="vacancies-form-image vacancies-form-image_2">
+                <div class="vacancies-form-image vacancies-form-image_2" data-shift="60">
                     <img src="/local/assets/images/vacancies/image2.jpg"
                          alt="Приезжайте строить карьеру в Амурской области" class="vacancies-form-image__img"
                          loading="lazy">
                 </div>
-                <div class="vacancies-form-image vacancies-form-image_3">
+                <div class="vacancies-form-image vacancies-form-image_3" data-shift="-20">
                     <img src="/local/assets/images/vacancies/image3.jpg"
                          alt="Приезжайте строить карьеру в Амурской области" class="vacancies-form-image__img"
                          loading="lazy">
                 </div>
                 <div class="vacancies-form-wrapper__title-container">
                     <div class="vacancies-form-wrapper__title">
-                        Приезжайте<br>
-                        строить карьеру<br>
-                        <em>в Амурской области</em>
+                        Приезжайте строить карьеру <em>в&nbsp;Амурской области</em>
                     </div>
                     <div class="vacancies-form__heart">
                         <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">

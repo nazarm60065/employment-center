@@ -25,11 +25,7 @@ $mustache = new Mustache_Engine(array(
             <div class="footer-top">
                 <?= $mustache->render('footer-logo', ['isMainPage' => $pageConfig['isMainPage']]) ?>
                 <div class="footer__title">
-                    Амурская область —<br>
-                    <em>
-                        безграничные карьерные<br>
-                        возможности
-                    </em>
+                    Амурская область&nbsp;&mdash; <em>безграничные карьерные возможности</em>
                 </div>
             </div>
             <div class="footer-button-container">

@@ -184,6 +184,7 @@
     bottom: 30px
 
   .footer__title
+    max-width: 700px
     font-size: 60px
     em
       font-size: 60px
@@ -194,14 +195,48 @@
     font-size: 20px
     border-width: 4px
     padding: 3px
+    background-color: $primary
+    transition: background-color $default-transition, border-color $default-transition
+
+    path
+      transition: $default-transition
 
   .footer__button-inner
     padding: 9px 9px 9px 46px
     transition: background-color $default-transition, color $default-transition
 
+  .footer__button-icon
+    transition: background-color $default-transition
+
+  .footer__button:hover
+    background-color: #fff
+    border-color: $primary
+
   .footer__button:hover .footer__button-inner
     background-color: $primary
     color: #fff
+
+  .footer__button:hover .footer__button-icon
+    background-color: #fff
+    path[stroke]
+      stroke: $primary
+    path[fill]
+      fill: $primary
+
+  .footer__button:focus
+    background-color: #fff
+    border-color: $primary-focused
+
+  .footer__button:focus .footer__button-inner
+    background-color: $primary-focused
+    color: #fff
+
+  .footer__button:focus .footer__button-icon
+    background-color: #fff
+    path[stroke]
+      stroke: $primary-focused
+    path[fill]
+      fill: $primary-focused
 
   .footer-bottom
     margin-top: 56px
@@ -241,6 +276,7 @@
     bottom: 48px
 
   .footer__title
+    max-width: 930px
     font-size: 80px
     em
       font-size: 80px

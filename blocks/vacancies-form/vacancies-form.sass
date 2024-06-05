@@ -75,6 +75,15 @@
 
 .vacancies-form-box
   margin-top: 60px
++mq(mobile, max)
+  .vacancies-form-wrapper__title
+    font-size: 32px
+
+  .vacancies-form-image_1
+    left: -30px
+
+  .vacancies-form-image_3
+    right: 0
 
 +mq(tablet)
   .vacancies-form-wrapper
@@ -167,18 +176,21 @@
     transform: rotate(-35.59deg)
 
   .vacancies-form-image_1
-    top: 409px
+    top: 630px
     left: 531px
+    transform: translate3d(-25px, -220px, 0)
 
   .vacancies-form-image_2
-    top: -5px
+    top: -155px
     left: 1287px
     right: auto
+    transform: translate3d(20px, 150px, 0)
 
   .vacancies-form-image_3
-    top: 453px
+    top: 500px
     left: 1136px
     right: auto
+    transform: translate3d(-7px, -45px, 0)
 
   .vacancies-form__heart
     width: 104px

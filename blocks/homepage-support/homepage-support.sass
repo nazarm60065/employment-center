@@ -131,6 +131,17 @@
   white-space: nowrap
 
 
+@media screen and (max-width: 327px)
+  .homepage-support-hint_2
+    top: 195px
+
++mq(mobile, max)
+  .homepage-support__title
+    font-size: 22px
+
+  .homepage-support-hint
+    padding: 4px 24px 4px 4px
+
 +mq(tablet)
   .homepage-support
     padding: 125px 0 0
@@ -264,7 +275,6 @@
     border-radius: 32px
     cursor: pointer
 
-
   .homepage-support-hint_1
     left: 0
     top: -385px
@@ -344,9 +354,19 @@
     font-size: 24px
     line-height: 29px
 
+
+  .homepage-support-hint
+    border-radius: 36px
+
+  .homepage-support-hint_1
+    left: 0
+    top: -450px
+    transform: translate3d(0, 330px, 0)
+
   .homepage-support-hint_2
-    top: 210px
-    right: -60px
+    top: 500px
+    right: 0
+    transform: translate3d(0, -150px, 0)
 
   .homepage-support-hint__title
     font-size: 24px

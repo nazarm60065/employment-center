@@ -8,7 +8,7 @@
         <input name="{{code}}"
                type="{{#typeInput}}{{.}}{{/typeInput}}{{^typeInput}}text{{/typeInput}}"
                value="{{value}}"
-            {{#placeholder}} placeholder="{{.}}{{#required}}*{{/required}}"{{/placeholder}}
+            {{#placeholder}} placeholder="{{.}}{{#required}} *{{/required}}"{{/placeholder}}
             {{#inputmode}} inputmode="{{.}}"{{/inputmode}}{{#html_required}} required{{/html_required}}
                class="form__control{{#requiredCssClass}} {{.}}{{/requiredCssClass}}{{#maskCssClass}} {{.}}{{/maskCssClass}}{{#additionalCssClass}} {{.}}{{/additionalCssClass}}">
     </label>

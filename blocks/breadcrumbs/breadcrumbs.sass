@@ -11,9 +11,12 @@
   margin-bottom: 28px
 
 .breadcrumbs__item_first
-  width: 24px
-  height: 24px
-  +svg
+  display: flex
+  align-items: center
+  gap: 12px
+  svg
+    width: 24px
+    height: 24px
 
 .breadcrumbs__item:not(.breadcrumbs__item_first)
   margin-top: 5px
@@ -25,8 +28,7 @@
   content: '•'
   margin-right: 12px
 
-.breadcrumbs__item:nth-child(1):before,
-.breadcrumbs__item:nth-child(2):before
+.breadcrumbs__item:nth-child(1):before
   display: none
 
 .breadcrumbs__item_last
@@ -39,3 +41,28 @@
 +mq(tablet)
   .breadcrumbs
     margin-bottom: 32px
+
++mq(desktop)
+  .breadcrumbs__item_first
+    path, circle
+      transition: $default-transition
+
+  .breadcrumbs__item_first:hover
+    path
+      stroke: #fff
+
+    circle
+      fill: $primary
+
+  .breadcrumbs__item_first:focus
+    path
+      stroke: #fff
+
+    circle
+      fill: $primary-focused
+
+  .breadcrumbs__item
+    transition: color $default-transition
+
+  .breadcrumbs__item:focus
+    color: $primary-focused

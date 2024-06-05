@@ -1,4 +1,5 @@
 .homepage-region
+  overflow: hidden
   margin: 72px 0
   position: relative
   z-index: 0
@@ -15,6 +16,20 @@
   border: 2px solid $primary
   padding: 10px
   border-radius: 50%
+  +svg
+
+
+.homepage-region__title-bg
+  position: absolute
+  z-index: -1
+  top: -15px
+  left: -40px
+  width: 382px
+  height: 142px
+  transform: rotate(8.3deg)
+  border-radius: 50%
+  background-color: #111111B8
+  filter: blur(200px)
   +svg
 
 +mq(tablet, max)
@@ -109,11 +124,12 @@
     margin: 0 auto
 
   .homepage-region-title-container
-    max-width: none
+    max-width: 600px
     margin: 0
     padding: 0
 
   .homepage-region__title
+    position: relative
     width: 100%
     color: #fff
     font-size: 48px
@@ -125,6 +141,12 @@
       font-size: 50px
       font-style: italic
       line-height: 45px
+
+  .homepage-region__title-bg
+    width: 541px
+    height: 201px
+    top: -45px
+    left: -114px
 
   .homepage-region-slider
     width: 100%
@@ -181,6 +203,10 @@
     margin: 104px 0 104px
     border-radius: 80px
 
+
+  .homepage-region-title-container
+    max-width: 930px
+
   .homepage-region__title
     font-size: 80px
     line-height: 72px
@@ -189,6 +215,11 @@
       font-size: 84px
       line-height: 75.6px
 
+  .homepage-region__title-bg
+    width: 800px
+    height: 300px
+    top: -30px
+    left: -60px
   .homepage-region-slider-wrapper
     flex-direction: row
     justify-content: space-between
@@ -216,3 +247,10 @@
   .homepage-region-slider-nav
     margin-top: 32px
     padding: 0
+
++mq(wide-screen)
+  .homepage-region__title-bg
+    width: 1144px
+    height: 427px
+    top: -33px
+    left: -223px

@@ -29,6 +29,7 @@
   flex-direction: column
   justify-content: space-between
   height: 100%
+  max-width: 700px
 
 .homepage-top__title
   font-size: 36px
@@ -64,7 +65,7 @@
   text-align: center
   border-radius: 44px
   border: 2px solid #fff
-  padding: 17px 50px 17px 50px
+  padding: 17px 64px 17px 36px
 
 .homepage-top__button-icon
   position: absolute
@@ -112,6 +113,13 @@
   letter-spacing: -0.04em
   color: #fff
 
++mq(mobile, max)
+  .homepage-top-button-container
+    padding: 0
+
+  .homepage-top__button-inner
+    padding: 17px 54px 17px 14px
+
 +mq(tablet, max)
   .homepage-top-hint__text
     display: none
@@ -134,7 +142,7 @@
 
   .homepage-top-sticky
     display: block
-    position: sticky
+    position: relative
     height: 80%
     top: $hh2 + 55px
 
@@ -192,6 +200,45 @@
     bottom: 416px
     left: calc(50% + 350px)
 
+  .homepage-top__button
+    transition: $default-transition
+    path
+      transition: $default-transition
+
+  .homepage-top__button-inner
+    transition: border $default-transition
+
+  .homepage-top__button-icon
+    transition: background-color $default-transition
+
+  .homepage-top__button:not(:disabled):hover
+    background-color: $primary
+    color: #fff
+
+    .homepage-top__button-inner
+      border-color: #fff
+
+    .homepage-top__button-icon
+      background-color: #fff
+
+    path[stroke]
+      stroke: $primary
+    path[fill]
+      fill: $primary
+
+  .homepage-top__button:not(:disabled):focus
+    background-color: $primary-focused
+    color: #fff
+
+    .homepage-top__button-icon
+      background-color: #fff
+
+    path[fill]
+      fill: $primary-focused
+
+    path[stroke]
+      stroke: $primary-focused
+
 +mq(wide-screen)
   .homepage-top
     height: 1258px
@@ -199,6 +246,9 @@
 
   .homepage-top-bg
     border-radius: 0 0 80px 80px
+
+  .homepage-top-sticky
+    max-width: 930px
 
   .homepage-top__title
     font-size: 80px

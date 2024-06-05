@@ -12,6 +12,7 @@ export default () => {
       modules: [EffectFade, Controller],
       allowTouchMove: false,
       effect: 'fade',
+      loop: true,
       fadeEffect: {
         crossFade: false,
       }
@@ -22,6 +23,7 @@ export default () => {
     sliderSwiperObj = new Swiper(slider, {
       modules: [Navigation, Controller],
       autoHeight: true,
+      loop: true,
       navigation: {
         prevEl: '.homepage-region-slider__arrow_prev',
         nextEl: '.homepage-region-slider__arrow_next',

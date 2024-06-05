@@ -63,7 +63,8 @@
     color: #C4C4C4
 
 .form__textarea
-  resize: vertical
+  resize: none
+  height: 140px
   transition: height 0s
 
 .form__control-icon
@@ -88,6 +89,10 @@
   font-weight: 600
   line-height: 1
   letter-spacing: -0.04em
+
++mq(mobile, max)
+  .form__submit
+    padding: 16px
 
 +mq(tablet)
   .form
@@ -136,6 +141,8 @@
   .form__title
     font-size: 48px
     line-height: 43.2px
+    em
+      font-size: 49px
 
   .form__subtitle
     margin-top: 20px

@@ -56,17 +56,19 @@
   position: relative
   background-color: rgba(255, 255, 255, 0.08)
   border-radius: 16px
-  padding: 24px
+  padding: 24px 140px 24px 24px
   display: flex
   align-items: flex-end
   min-height: 140px
   overflow: hidden
 
 .homepage-career-card__title
+  position: relative
   font-size: 24px
   font-weight: 600
   line-height: 1
   letter-spacing: -0.04em
+  z-index: 1
 
 .homepage-career-card__count
   position: absolute
@@ -93,6 +95,7 @@
   border-radius: 16px
   z-index: 0
   transform: rotate(4deg)
+  background-color: #D9D9D9
 
 .homepage-career-card-img-wrapper:before
   content: ''
@@ -263,8 +266,52 @@
     grid-template-columns: repeat(3, minmax(0, 1fr))
     gap: 24px
 
+  .homepage-career-card
+    position: relative
+    transition: background-color $default-transition, color $default-transition, border $default-transition
+
+  .homepage-career-card:before
+    content: ''
+    position: absolute
+    top: 0
+    bottom: -8px
+    left: 0
+    right: 0
+    border-radius: 16px
+    opacity: 0
+    transition: opacity $default-transition
+    
+  .homepage-career-card:hover
+    color: $main-color
+    background-color: #E4EAEF
+
+    &:before
+      background-color: $primary
+
+    .homepage-career-card-img-wrapper:before
+      background: #D9DFE3
+
   .homepage-career-card__title
     max-width: 240px
+
+  .homepage-career-card-img-wrapper:before
+    transition: background-color $default-transition
+
+  .homepage-career__link
+    transition: $default-transition
+
+  .homepage-career__link:not(:disabled):hover
+    background-color: $primary
+    color: #fff
+    border-color: #fff
+    outline-color: $primary
+
+  .homepage-career__link:not(:disabled):focus
+    color: #fff
+    border-color: #fff
+    background-color: $primary-focused
+    outline-color: $primary-focused
+
 
 +mq(wide-screen)
   .homepage-career-card

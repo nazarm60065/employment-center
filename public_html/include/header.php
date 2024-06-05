@@ -45,7 +45,7 @@ $mustache = new Mustache_Engine(array(
         </div>
         <div class="header-modal-content">
             <?=$mustache->render('header-modal-menu', include $_SERVER['DOCUMENT_ROOT'] . '/context/header/menu.php')?>
-            <?=$mustache->render('header-modal-contacts', include $_SERVER['DOCUMENT_ROOT'] . '/context/footer/contacts.php')?>
+            <?=$mustache->render('header-modal-contacts', include $_SERVER['DOCUMENT_ROOT'] . '/context/header/contacts-modal.php')?>
         </div>
     </div>
 </div>

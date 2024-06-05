@@ -48,10 +48,7 @@ $pageConfig = [
         <div class="container homepage-top-container">
             <div class="homepage-top-sticky">
                 <div class="homepage-top__title">
-                    Амурская область — <br>
-                    <em>безграничные
-                        карьерные<br>
-                        возможности</em>
+                    Амурская область&nbsp;&mdash; <em>безграничные карьерные возможности</em>
                 </div>
                 <div class="homepage-top-button-container">
                     <button type="button" data-src="#career" class="homepage-top__button anchor">
@@ -129,9 +126,7 @@ $pageConfig = [
                 <div class="homepage-career-inner">
                     <div class="homepage-career-top">
                         <div class="homepage-career__title">
-                            <em>Амурская область —</em><br>
-                            безграничные
-                            карьерные<br class="mobile-hide tablet-show"> возможности
+                            <em>Амурская область&nbsp;&mdash;</em> безграничные карьерные возможности
                         </div>
                         <div class="homepage-career-count">
                             <div class="homepage-career-count__bg">
@@ -328,9 +323,9 @@ $pageConfig = [
         <div class="container homepage-transfer-container">
             <div class="homepage-transfer-inner">
                 <div class="homepage-transfer__title">
-                    Рассказываем, <em>кому <br>
-                        подойдет</em> переезд<br>
-                    в Амурскую область
+                    Рассказываем, <em>кому
+                    подойдет</em> переезд
+                    в&nbsp;Амурскую область
                 </div>
                 <div class="homepage-transfer-content">
                     <?= $mustache->render('homepage-transfer-features', include $_SERVER['DOCUMENT_ROOT'] . '/context/homepage/transfer/features.php') ?>
@@ -356,8 +351,7 @@ $pageConfig = [
                             <div class="homepage-transfer-info-box">
                                 <div class="homepage-transfer-info__title">Узнаешь себя в описании?</div>
                                 <div class="homepage-transfer-info__text">
-                                    Оставь свое контанты, мы свяжемся
-                                    и подберем для тебя подходящую вакансию
+                                    Оставь свои контакты, мы свяжемся и подберем для тебя подходящую вакансию
                                 </div>
                                 <div class="homepage-transfer-info-link-container">
                                     <a href="#modal-form" class="button button_filled-white-border homepage-transfer-info__link" data-fancybox>Хочу

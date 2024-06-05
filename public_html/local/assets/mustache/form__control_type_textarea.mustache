@@ -6,7 +6,7 @@
             </span>
         {{/icon}}
         <textarea name="{{code}}"
-            {{#placeholder}} placeholder="{{.}}{{#required}}*{{/required}}"{{/placeholder}}
+            {{#placeholder}} placeholder="{{.}}{{#required}} *{{/required}}"{{/placeholder}}
                   class="form__control form__textarea{{#requiredCssClass}} {{.}}{{/requiredCssClass}}{{#maskCssClass}} {{.}}{{/maskCssClass}}{{#additionalCssClass}} {{.}}{{/additionalCssClass}}">{{value}}</textarea>
     </label>
 </div>
