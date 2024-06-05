@@ -15,20 +15,15 @@
   border-radius: 0 0 32px 32px
   transition: background-color $default-transition, transform $default-transition
 
-.header_fixed
-  background-color: #fff
 
 .header_fixed .header-inner
   border-color: transparent
-
-.header_homepage.header_fixed
-  background-color: $primary
 
 .header_homepage .header-inner
   border-bottom-color: transparent
 
 .header-inner
-  padding: 16px 0
+  padding: 8px 0
   display: flex
   align-items: center
   border-bottom: 1px solid $border-color
@@ -36,17 +31,26 @@
 .header-content
   display: flex
   align-items: center
+  border-radius: 24px
+  padding: 4px
+  margin-right: -4px
+  transition: background-color $default-transition
 
++mq(tablet, max)
+  .header_homepage.header_fixed .header-content
+    background-color: transparent
 
 +mq(tablet)
   .with-fancybox .header
     padding-right: var(--scrollbar-width)
 
   .header-inner
-    padding-top: 20px
+    padding: 16px 0
 
   .header-content
     gap: 32px
+    padding-left: 28px
+    border-radius: 28px
 
 +mq(desktop, max)
   .header_fixed
@@ -55,14 +59,28 @@
   .header_fixed.header_scroll-up
     transform: translateY(0)
 
+  .header_fixed .header-content
+    background-color: #fff
+
 +mq(desktop)
   .header-container
     max-width: 1760px
+    padding-top: 8px
+    padding-bottom: 8px
+
+  .header_fixed .header-inner
+    background-color: #fff
+    border-radius: 42px
+    transition: background-color $default-transition, border-radius 0s
 
   .header-inner
-    padding: 24px 0 20px
+    padding: 4px
+    margin: 0 -4px
+    transition: background-color $default-transition, border-radius 0s $default-transition
 
   .header-content
     width: 100%
     min-width: 0
     justify-content: space-between
+    margin: 0
+    padding: 0

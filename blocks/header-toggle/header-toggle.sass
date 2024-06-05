@@ -1,3 +1,26 @@
+.header_homepage.header_fixed .header-toggle
+  background-color: $primary
+
+.header_homepage.header_fixed .header-toggle:before
+  opacity: 1
+
+.header-toggle
+  position: relative
+  transition: background-color $default-transition, outline-color $default-transition
+  border-radius: 24px
+
+.header_homepage .header-toggle:before
+  content: ''
+  position: absolute
+  top: -4px
+  left: -4px
+  right: -4px
+  bottom: -4px
+  border-radius: 24px
+  opacity: 0
+  background-color: $primary
+  transition: opacity $default-transition
+
 .header-toggle__button
   position: relative
   display: flex
@@ -70,6 +93,12 @@
 
 
 +mq(tablet)
+  .header-toggle
+    border-radius: 28px
+
+  .header_homepage .header-toggle:before
+    border-radius: 28px
+
   .header-toggle__button
     font-size: 20px
     padding: 14px 56px 14px 20px

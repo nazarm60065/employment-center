@@ -7,12 +7,14 @@
 .header-contact__title
   font-size: 12px
   color: $dark-grey-color64
+  transition: color $default-transition
 
 .header-contact__value
   margin-top: 8px
   color: $primary
   font-size: 20px
   font-weight: 600
+  transition: color $default-transition, margin-top $default-transition
 
 .header_homepage .header-contact__title
   color: transparentize(#fff, 0.36)
@@ -24,12 +26,35 @@
   .header-contacts
     display: none
 
++mq(tablet)
+  +mq(desktop, max)
+    .header_homepage.header_fixed .header-contact__title
+      color: #4D4D4D
+
+    .header_homepage.header_fixed .header-contact__value
+      color: $primary
+      margin-top: 2px
+
 +mq(desktop)
   .header-contacts
     margin-left: auto
+    height: 72px
+    border-radius: 36px
+    padding: 12px 0
+    transition: background-color $default-transition, padding $default-transition
 
   .header-contact__title
     font-size: 14px
 
   .header-contact__value
     font-size: 24px
+    
+  .header_fixed .header-contacts
+    padding: 12px 48px
+    background-color: $primary
+
+  .header_fixed .header-contact__title
+    color: rgba(255, 255, 255, 0.64)
+
+  .header_fixed .header-contact__value
+    color: #fff
