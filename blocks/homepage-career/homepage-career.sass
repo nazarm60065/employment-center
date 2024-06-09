@@ -268,34 +268,14 @@
 
   .homepage-career-card
     position: relative
-    transition: background-color $default-transition, color $default-transition, border $default-transition
+    outline: 1px solid transparent
+    transition: outline-color $default-transition
 
-  .homepage-career-card:before
-    content: ''
-    position: absolute
-    top: 0
-    bottom: -8px
-    left: 0
-    right: 0
-    border-radius: 16px
-    opacity: 0
-    transition: opacity $default-transition
-    
   .homepage-career-card:hover
-    color: $main-color
-    background-color: #E4EAEF
-
-    &:before
-      background-color: $primary
-
-    .homepage-career-card-img-wrapper:before
-      background: #D9DFE3
+    outline-color: #FFFFFF3D
 
   .homepage-career-card__title
     max-width: 240px
-
-  .homepage-career-card-img-wrapper:before
-    transition: background-color $default-transition
 
   .homepage-career__link
     transition: $default-transition
@@ -311,7 +291,6 @@
     border-color: #fff
     background-color: $primary-focused
     outline-color: $primary-focused
-
 
 +mq(wide-screen)
   .homepage-career-card
