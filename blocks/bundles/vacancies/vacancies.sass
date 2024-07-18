@@ -11,7 +11,7 @@
 
 .vacancies-top
   position: relative
-  margin-top: 40px
+  margin-top: 70px
   background-color: #F3F5F6
   border-radius: 0 0 48px 48px
 
@@ -35,19 +35,22 @@
 .vacancies-top-counter
   position: relative
   z-index: 1
-  width: 125px
+  min-width: 125px
   background-color: #fff
   border: 2px solid $primary
   outline: 6px solid #fff
   padding: 18px
   color: $primary
   border-radius: 30px
+  display: inline-flex
+  flex-direction: column
 
 .vacancies-top-counter__value
   font-size: 32px
   font-weight: 600
   line-height: 28.8px
   letter-spacing: -0.04em
+  white-space: nowrap
 
 .vacancies-top-counter__text
   font-size: 14px
@@ -137,7 +140,7 @@
     bottom: -40px
 
   .vacancies-top-counter
-    width: 145px
+    min-width: 145px
     padding: 22px
 
   .vacancies-top-counter__value
@@ -229,7 +232,7 @@
     bottom: 0
 
   .vacancies-top-counter
-    width: 157px
+    min-width: 157px
 
   .vacancies-top-counter__value
     font-size: 48px

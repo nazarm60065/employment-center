@@ -7,6 +7,7 @@ export class Header {
           page: '.page',
           toggle: '.header-toggle__button',
           overlay: '.header-modal-overlay',
+          menuItem: '.header-modal-menu-item__link',
         },
         classes: {
           headerModalReady: 'header-modal_ready',
@@ -45,12 +46,24 @@ export class Header {
       } else {
         this.openMenu()
       }
+
+      return true
     }
 
     const overlay = event.target.closest(this.selectors.overlay)
 
     if (overlay) {
       this.closeMenu()
+
+      return true
+    }
+
+    const menuItem = event.target.closest(this.selectors.menuItem)
+
+    if (menuItem) {
+      this.closeMenu()
+
+      return true
     }
   }
 
